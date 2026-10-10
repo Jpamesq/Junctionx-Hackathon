@@ -1,18 +1,20 @@
+# scanner.py
 import re
 import json
 import os
 from risk_engine import classify_primitive
 
-# Expressão regular para detetar nomes de algoritmos comuns
+# Regex para Algoritmos (Captura nomes isolados e com tamanhos de chave)
 CRYPTO_REGEX = re.compile(
-    r'\b(RSA[-_]?\d*|AES[-_]?(?:128|192|256)?|ECDSA|ECDH|secp256r1|SHA-?1|SHA-?256|SHA-?512|3DES|DES|ML-KEM|Kyber)\b', 
+    r'\b(RSA[-_]?\d*|AES[-_]?(?:128|192|256)?|ECDSA|ECDH|secp256r1|SHA-?1|SHA-?256|SHA-?512|3DES|DES|MD5|RC4|ML-KEM|Kyber)\b', 
     re.IGNORECASE
 )
 
+# Regex para Bibliotecas (Sem grupos de captura internos para não partir o findall)
 LIBRARY_REGEX = re.compile(
-    r'\b(import cryptography|from cryptography|import pycryptodome|import OpenSSL|from OpenSSL|' # Python
-    r'import java\.security|import javax\.crypto|' # Java
-    r'\"crypto\/[a-z0-9_]+\"|import \"crypto/tls\")\b', # Go
+    r'(?:import\s+cryptography|from\s+cryptography|import\s+pycryptodome|import\s+OpenSSL|from\s+OpenSSL|'
+    r'import\s+java\.security|import\s+javax\.crypto|'
+    r'crypto\/[a-z0-9_]+|import\s+"crypto\/tls")',
     re.IGNORECASE
 )
 
@@ -22,7 +24,7 @@ def scan_codebase(directory_path):
         for file in files:
             file_path = os.path.join(root, file)
             
-            # 1. Processar Ficheiros de Configuração JSON
+            # 1. Processar Ficheiros de Configuração JSON (KMS / Cloud)
             if file.endswith('.json'):
                 try:
                     with open(file_path, 'r', encoding='utf-8') as f:
@@ -36,13 +38,13 @@ def scan_codebase(directory_path):
                                 "type": "Cloud/KMS Config",
                                 "algorithm": match,
                                 "risk_level": risk,
-                                "risk_reason": desc  # <--- ADICIONADO AQUI
+                                "risk_reason": desc
                             })
                 except Exception:
                     continue
 
-            # 2. Processar Ficheiros de Código (Python, Java, Go, etc.)
-            elif file.endswith(('.py', '.java', '.go', '.yaml', '.env')):
+            # 2. Processar Ficheiros de Código Fonte
+            elif file.endswith(('.py', '.java', '.go', '.yaml', '.yml', '.env')):
                 try:
                     with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
                         for line_num, line in enumerate(f, 1):
@@ -56,7 +58,7 @@ def scan_codebase(directory_path):
                                     "type": "Codebase",
                                     "algorithm": match,
                                     "risk_level": risk,
-                                    "risk_reason": desc  # <--- ADICIONADO AQUI
+                                    "risk_reason": desc
                                 })
                                 
                             # B. Procurar por Bibliotecas Criptográficas
@@ -67,7 +69,7 @@ def scan_codebase(directory_path):
                                     "type": "Codebase (Library)",
                                     "algorithm": lib.strip(),
                                     "risk_level": "REVIEW",
-                                    "risk_reason": "Lib" # <--- ADICIONADO AQUI
+                                    "risk_reason": "Uso de biblioteca criptográfica detetado"
                                 })
                 except Exception:
                     continue
