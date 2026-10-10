@@ -49,7 +49,8 @@ if target_dir:
         medium = len(df[df['risk_level'] == 'MEDIUM'])
         safe = len(df[df['risk_level'] == 'SAFE'])
         total = len(df)
-        score = int(((safe * 1.0 + medium * 0.5) / total) * 100) if total > 0 else 100
+        score = min(100, int(((critical * 3 + medium * 1) / (total * 3)) * 100)) if total > 0 else 0
+
         # Métricas visuais coloridas
         st.subheader(f"Quantum Risk Score: {score}/100")
         col1, col2, col3 = st.columns(3)
@@ -75,7 +76,7 @@ if target_dir:
                 return 'background-color: rgba(40, 167, 69, 0.3); color: #28a745; font-weight: bold;'
             return ''
 
-        # Aplicar estilo de cores na coluna de risco (usando .map em vez de applymap)
+        # Aplicar estilo de cores na coluna de risco (usando .map de forma segura)
         styled_df = df_display.style.map(color_risk_column, subset=['Nível de Risco'])
 
         # Exibir a tabela grande unificada, sem scroll interno forçado e sem índice
