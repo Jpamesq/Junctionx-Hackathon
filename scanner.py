@@ -1,11 +1,10 @@
-# scanner.py
 import re
 import json
 import os
 from risk_engine import classify_primitive
 from pcap_scanner import scan_network_packets
 
-# Regex para Algoritmos (Captura nomes isolados e com tamanhos de chave)
+# Regex para Algoritmos
 CRYPTO_REGEX = re.compile(
     r'\b(RSA[-_]?\d*|AES[-_]?(?:128|192|256)?|ECDSA|ECDH|secp256r1|SHA-?1|SHA-?256|SHA-?512|3DES|DES|MD5|RC4|ML-KEM|Kyber)\b', 
     re.IGNORECASE
@@ -38,7 +37,7 @@ def scan_codebase(directory_path):
                             risk, desc = classify_primitive(match)
                             results.append({
                                 "file": file,
-                                "type": "Cloud/KMS Config",
+                                "type": "Cloud",
                                 "algorithm": match,
                                 "risk_level": risk,
                                 "risk_reason": desc,
@@ -47,14 +46,18 @@ def scan_codebase(directory_path):
                 except Exception:
                     continue
 
-            # 2. Código Fonte
+            # 2. Código Fonte (Com Redução de Ruído para REVIEW)
             elif file.endswith(('.py', '.java', '.go', '.yaml', '.env')):
                 try:
                     with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
+                        file_has_specific_algo = False
+                        pending_libs = []
+                        
                         for line_num, line in enumerate(f, 1):
-                            # Algoritmos
+                            # Detetar Algoritmos
                             matches = CRYPTO_REGEX.findall(line)
                             for match in set(m.upper() for m in matches):
+                                file_has_specific_algo = True
                                 risk, desc = classify_primitive(match)
                                 
                                 key_match = KEY_SIZE_REGEX.search(line)
@@ -73,21 +76,26 @@ def scan_codebase(directory_path):
                                     "key_length": key_length
                                 })
                                 
-                            # Bibliotecas
+                            # Guardar imports de bibliotecas
                             lib_matches = LIBRARY_REGEX.findall(line)
                             for lib in set(lib_matches):
+                                pending_libs.append((lib.strip(), line_num))
+                                
+                        # Adicionar como REVIEW apenas se nenhum algoritmo for encontrado no ficheiro
+                        if not file_has_specific_algo and pending_libs:
+                            for lib, line_num in pending_libs:
                                 results.append({
                                     "file": f"{file}:{line_num}",
-                                    "type": "Codebase (Library)",
-                                    "algorithm": lib.strip(),
+                                    "type": "Codebase",
+                                    "algorithm": lib,
                                     "risk_level": "REVIEW",
-                                    "risk_reason": "Uso de biblioteca criptográfica detetado",
+                                    "risk_reason": "Uso de biblioteca detetado sem algoritmo claro.",
                                     "key_length": "N/A"
                                 })
                 except Exception:
                     continue
 
-            # 3. Artefactos Binários (.dll, .class, .so, .jar)
+            # 3. Artefactos Binários
             elif file.endswith(('.dll', '.exe', '.so', '.class', '.jar', '.bin')):
                 try:
                     with open(file_path, 'rb') as f:
@@ -104,7 +112,7 @@ def scan_codebase(directory_path):
 
                                 results.append({
                                     "file": file,
-                                    "type": "Binary Artifact",
+                                    "type": "Binary",
                                     "algorithm": match,
                                     "risk_level": risk,
                                     "risk_reason": desc,
@@ -113,7 +121,7 @@ def scan_codebase(directory_path):
                 except Exception:
                     continue
 
-            # 4. Capturas de Rede (.pcap / .pcapng) usando Scapy
+            # 4. Capturas de Rede (Scapy)
             elif file.endswith(('.pcap', '.pcapng')):
                 try:
                     pcap_results = scan_network_packets(file_path)
