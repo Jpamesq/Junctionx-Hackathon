@@ -28,14 +28,26 @@ RISK_LEVELS = {
     }
 }
 
+# risk_engine.py - Exemplo de ajuste de ordem e validação exata
 def classify_primitive(name: str):
-    name_upper = name.upper()
-    norm_name = name_upper.replace("-", "").replace("_", "")
+    name_upper = name.upper().replace("-", "").replace("_", "")
     
-    for level, data in RISK_LEVELS.items():
-        for pattern in data["patterns"]:
-            norm_pattern = pattern.replace("-", "").replace("_", "")
-            if norm_pattern == norm_name or norm_pattern in norm_name:
-                return level, data["description"]
+    # 1. Testar SAFE em primeiro lugar para capturar AES256 / SHA512 / PQC
+    for pattern in RISK_LEVELS["SAFE"]["patterns"]:
+        norm_pattern = pattern.replace("-", "").replace("_", "")
+        if norm_pattern == name_upper or norm_pattern in name_upper:
+            return "SAFE", RISK_LEVELS["SAFE"]["description"]
             
+    # 2. Testar CRITICAL (Shor)
+    for pattern in RISK_LEVELS["CRITICAL"]["patterns"]:
+        norm_pattern = pattern.replace("-", "").replace("_", "")
+        if norm_pattern == name_upper or norm_pattern in name_upper:
+            return "CRITICAL", RISK_LEVELS["CRITICAL"]["description"]
+            
+    # 3. Testar MEDIUM (Grover)
+    for pattern in RISK_LEVELS["MEDIUM"]["patterns"]:
+        norm_pattern = pattern.replace("-", "").replace("_", "")
+        if norm_pattern == name_upper or norm_pattern in name_upper:
+            return "MEDIUM", RISK_LEVELS["MEDIUM"]["description"]
+
     return "UNKNOWN", "Padrão não reconhecido"

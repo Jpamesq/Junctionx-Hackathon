@@ -30,7 +30,7 @@ def main():
     total = len(df)
     
     # Evitar divisão por zero se o total for 0
-    score = min(100, int(((critical * 3 + medium * 1) / (total * 3)) * 100)) if total > 0 else 0
+    score = int(((safe * 1.0 + medium * 0.5) / total) * 100) if total > 0 else 100
 
     # ------------------------------------------
     # IMPRIMIR O DASHBOARD NO TERMINAL

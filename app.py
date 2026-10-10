@@ -49,8 +49,7 @@ if target_dir:
         medium = len(df[df['risk_level'] == 'MEDIUM'])
         safe = len(df[df['risk_level'] == 'SAFE'])
         total = len(df)
-        score = min(100, int(((critical * 3 + medium * 1) / (total * 3)) * 100)) if total > 0 else 0
-
+        score = int(((safe * 1.0 + medium * 0.5) / total) * 100) if total > 0 else 100
         # Métricas visuais coloridas
         st.subheader(f"Quantum Risk Score: {score}/100")
         col1, col2, col3 = st.columns(3)
