@@ -3,10 +3,7 @@ import re
 import json
 import os
 from risk_engine import classify_primitive
-from pcap_scanner import parse_pcap
-
-# Dentro da função scan_codebase(), no loop dos ficheiros:
-
+from pcap_scanner import scan_network_packets
 
 # Regex para Algoritmos (Captura nomes isolados e com tamanhos de chave)
 CRYPTO_REGEX = re.compile(
@@ -14,7 +11,7 @@ CRYPTO_REGEX = re.compile(
     re.IGNORECASE
 )
 
-# Regex para Bibliotecas (Usando grupo não-capturador (?:) para não quebrar o findall)
+# Regex para Bibliotecas
 LIBRARY_REGEX = re.compile(
     r'(?:import\s+cryptography|from\s+cryptography|import\s+pycryptodome|import\s+OpenSSL|from\s+OpenSSL|' 
     r'import\s+java\.security|import\s+javax\.crypto|' 
@@ -37,7 +34,6 @@ def scan_codebase(directory_path):
                         data = json.load(f)
                         content_str = json.dumps(data)
                         matches = CRYPTO_REGEX.findall(content_str)
-                        # Normalizar maiúsculas para evitar duplicados
                         for match in set(m.upper() for m in matches):
                             risk, desc = classify_primitive(match)
                             results.append({
@@ -56,7 +52,6 @@ def scan_codebase(directory_path):
                 try:
                     with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
                         for line_num, line in enumerate(f, 1):
-                            
                             # Algoritmos
                             matches = CRYPTO_REGEX.findall(line)
                             for match in set(m.upper() for m in matches):
@@ -91,9 +86,6 @@ def scan_codebase(directory_path):
                                 })
                 except Exception:
                     continue
-            elif file.endswith(('.pcap', '.pcapng')):
-                pcap_findings = parse_pcap(file_path)
-                results.extend(pcap_findings)
 
             # 3. Artefactos Binários (.dll, .class, .so, .jar)
             elif file.endswith(('.dll', '.exe', '.so', '.class', '.jar', '.bin')):
@@ -121,25 +113,12 @@ def scan_codebase(directory_path):
                 except Exception:
                     continue
 
-            # 4. Capturas de Rede (.pcap / .pcapng)
+            # 4. Capturas de Rede (.pcap / .pcapng) usando Scapy
             elif file.endswith(('.pcap', '.pcapng')):
                 try:
-                    with open(file_path, 'rb') as f:
-                        content = f.read()
-                        ascii_strings = re.findall(rb'[a-zA-Z0-9_\-\.]{4,}', content)
-                        for b_str in set(ascii_strings):
-                            decoded_str = b_str.decode('utf-8', errors='ignore')
-                            matches = CRYPTO_REGEX.findall(decoded_str)
-                            for match in set(m.upper() for m in matches):
-                                risk, desc = classify_primitive(match)
-                                results.append({
-                                    "file": file,
-                                    "type": "Network Capture (PCAP)",
-                                    "algorithm": match,
-                                    "risk_level": risk,
-                                    "risk_reason": desc,
-                                    "key_length": "N/A"
-                                })
+                    pcap_results = scan_network_packets(file_path)
+                    if pcap_results:
+                        results.extend(pcap_results)
                 except Exception:
                     continue
                     
