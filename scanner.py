@@ -1,3 +1,4 @@
+# scanner.py
 import re
 import json
 import os
@@ -9,15 +10,14 @@ CRYPTO_REGEX = re.compile(
     re.IGNORECASE
 )
 
-# Regex para Bibliotecas (Sem grupos de captura internos para não partir o findall)
+# Regex para Bibliotecas (Usando grupo não-capturador (?:) para não quebrar o findall)
 LIBRARY_REGEX = re.compile(
-    r'\b(import cryptography|from cryptography|import pycryptodome|import OpenSSL|from OpenSSL|' 
-    r'import java\.security|import javax\.crypto|' 
-    r'\"crypto\/[a-z0-9_]+\"|import \"crypto/tls\")\b', 
+    r'(?:import\s+cryptography|from\s+cryptography|import\s+pycryptodome|import\s+OpenSSL|from\s+OpenSSL|' 
+    r'import\s+java\.security|import\s+javax\.crypto|' 
+    r'crypto\/[a-z0-9_]+|import\s+"crypto\/tls")', 
     re.IGNORECASE
 )
 
-# Apanha key_size=2048 (Python), .init(256) (Java), ou GenerateKey(..., 2048) (Go)
 KEY_SIZE_REGEX = re.compile(r'(?:key_size\s*=\s*|\.init\(\s*|GenerateKey\([^,]+,\s*)(\d+)', re.IGNORECASE)
 
 def scan_codebase(directory_path):
@@ -26,14 +26,15 @@ def scan_codebase(directory_path):
         for file in files:
             file_path = os.path.join(root, file)
             
-            # 1. Processar Ficheiros de Configuração JSON (KMS / Cloud)
+            # 1. Configurações JSON (KMS / Cloud)
             if file.endswith('.json'):
                 try:
                     with open(file_path, 'r', encoding='utf-8') as f:
                         data = json.load(f)
                         content_str = json.dumps(data)
                         matches = CRYPTO_REGEX.findall(content_str)
-                        for match in set(matches):
+                        # Normalizar maiúsculas para evitar duplicados
+                        for match in set(m.upper() for m in matches):
                             risk, desc = classify_primitive(match)
                             results.append({
                                 "file": file,
@@ -46,23 +47,21 @@ def scan_codebase(directory_path):
                 except Exception:
                     continue
 
-            # 2. Processar Ficheiros de Código (Python, Java, Go, etc.)
+            # 2. Código Fonte
             elif file.endswith(('.py', '.java', '.go', '.yaml', '.env')):
                 try:
                     with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
                         for line_num, line in enumerate(f, 1):
                             
-                            # A. Procurar por Algoritmos
+                            # Algoritmos
                             matches = CRYPTO_REGEX.findall(line)
-                            for match in set(matches):
+                            for match in set(m.upper() for m in matches):
                                 risk, desc = classify_primitive(match)
                                 
-                                # Procurar tamanho da chave na mesma linha
                                 key_match = KEY_SIZE_REGEX.search(line)
                                 if key_match:
                                     key_length = key_match.group(1)
                                 else:
-                                    # Rede de segurança: tentar extrair o número do próprio nome (ex: AES-128 -> 128)
                                     num_in_name = re.search(r'\d{3,}', match)
                                     key_length = num_in_name.group(0) if num_in_name else "Não definido"
 
@@ -75,7 +74,7 @@ def scan_codebase(directory_path):
                                     "key_length": key_length
                                 })
                                 
-                            # B. Procurar por Bibliotecas Criptográficas
+                            # Bibliotecas
                             lib_matches = LIBRARY_REGEX.findall(line)
                             for lib in set(lib_matches):
                                 results.append({
@@ -83,30 +82,24 @@ def scan_codebase(directory_path):
                                     "type": "Codebase (Library)",
                                     "algorithm": lib.strip(),
                                     "risk_level": "REVIEW",
-                                    "risk_reason": "Lib",
+                                    "risk_reason": "Uso de biblioteca criptográfica detetado",
                                     "key_length": "N/A"
                                 })
                 except Exception:
                     continue
 
-            # 3. Processar Artefactos Binários (.dll, .class, .so)
+            # 3. Artefactos Binários (.dll, .class, .so, .jar)
             elif file.endswith(('.dll', '.exe', '.so', '.class', '.jar', '.bin')):
                 try:
-                    # Ler o ficheiro em modo de bytes (rb)
                     with open(file_path, 'rb') as f:
                         content = f.read()
-                        
-                        # Extrair todas as "strings" legíveis por humanos presas no binário
                         ascii_strings = re.findall(rb'[a-zA-Z0-9_\-\.]{4,}', content)
                         
                         for b_str in set(ascii_strings):
                             decoded_str = b_str.decode('utf-8', errors='ignore')
-                            
-                            # Procurar algoritmos nas strings extraídas
                             matches = CRYPTO_REGEX.findall(decoded_str)
-                            for match in set(matches):
+                            for match in set(m.upper() for m in matches):
                                 risk, desc = classify_primitive(match)
-                                
                                 num_in_name = re.search(r'\d{3,}', match)
                                 key_length = num_in_name.group(0) if num_in_name else "Não definido"
 
@@ -117,6 +110,28 @@ def scan_codebase(directory_path):
                                     "risk_level": risk,
                                     "risk_reason": desc,
                                     "key_length": key_length
+                                })
+                except Exception:
+                    continue
+
+            # 4. Capturas de Rede (.pcap / .pcapng)
+            elif file.endswith(('.pcap', '.pcapng')):
+                try:
+                    with open(file_path, 'rb') as f:
+                        content = f.read()
+                        ascii_strings = re.findall(rb'[a-zA-Z0-9_\-\.]{4,}', content)
+                        for b_str in set(ascii_strings):
+                            decoded_str = b_str.decode('utf-8', errors='ignore')
+                            matches = CRYPTO_REGEX.findall(decoded_str)
+                            for match in set(m.upper() for m in matches):
+                                risk, desc = classify_primitive(match)
+                                results.append({
+                                    "file": file,
+                                    "type": "Network Capture (PCAP)",
+                                    "algorithm": match,
+                                    "risk_level": risk,
+                                    "risk_reason": desc,
+                                    "key_length": "N/A"
                                 })
                 except Exception:
                     continue

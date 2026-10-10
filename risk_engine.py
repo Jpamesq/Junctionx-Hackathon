@@ -29,13 +29,13 @@ RISK_LEVELS = {
 }
 
 def classify_primitive(name: str):
-    """
-    Categorizes identified primitives into clear risk tiers.
-    """
     name_upper = name.upper()
+    norm_name = name_upper.replace("-", "").replace("_", "")
     
     for level, data in RISK_LEVELS.items():
-        if any(pattern in name_upper for pattern in data["patterns"]):
-            return level, data["description"]
+        for pattern in data["patterns"]:
+            norm_pattern = pattern.replace("-", "").replace("_", "")
+            if norm_pattern == norm_name or norm_pattern in norm_name:
+                return level, data["description"]
             
     return "UNKNOWN", "Padrão não reconhecido"
