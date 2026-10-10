@@ -5,7 +5,7 @@ from scanner import scan_codebase
 from cbom_generator import generate_cbom
 
 def main():
-    # Recebe a pasta como argumento (ex: python main.py ./src)
+    # Recebe a pasta como argumento 
     target_dir = sys.argv[1] if len(sys.argv) > 1 else "."
     
     print(f"\n🔍 A analisar ativos criptográficos em: {target_dir}...\n")
@@ -17,7 +17,8 @@ def main():
 
     df = pd.DataFrame(results)
     
-    # Cálculos
+    # Cálculos, basicamente conta contas as ocupaçoes por coluna da tabela
+    
     critical = len(df[df['risk_level'] == 'CRITICAL'])
     medium = len(df[df['risk_level'] == 'MEDIUM'])
     safe = len(df[df['risk_level'] == 'SAFE'])
