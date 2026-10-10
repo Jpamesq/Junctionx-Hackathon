@@ -6,13 +6,13 @@
     {
       "type": "cryptographic-asset",
       "bom-ref": "crypto-asset-0",
-      "name": "sha1",
+      "name": "crypto/rand",
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "sha1",
+          "primitive": "crypto/rand",
           "cryptoFunctions": [
-            "MEDIUM"
+            "REVIEW"
           ]
         }
       },
@@ -61,7 +61,7 @@
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "AES",
+          "primitive": "rsa",
           "cryptoFunctions": [
             "MEDIUM"
           ]
