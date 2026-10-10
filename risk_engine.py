@@ -2,21 +2,21 @@
 
 RISK_LEVELS = {
     "CRITICAL": {
-        "description": "Vulnerável ao Algoritmo de Shor (Criptografia Assimétrica Clássica)",
+        "description": "Vulnerável ao Algoritmo de Shor",
         # Asymmetric schemes vulnerable to Shor's algorithm
         "patterns": ["RSA", "ECDSA", "ECDH", "DSA", "DH", "DIFFIE-HELLMAN", "SECP256R1", "SECP384R1"],
-        "remediation": "Migrar para PQC (ex: ML-KEM para troca de chaves, ML-DSA para assinaturas)",
+        "remediation": "Migrar para PQC",
         "nist_standard": None
     },
     "MEDIUM": {
-        "description": "Enfraquecido pelo Algoritmo de Grover (Cifras Simétricas curtas e Hashes legados)",
+        "description": "Enfraquecido pelo Algoritmo de Grover",
         # Symmetric ciphers/hashes weakened by Grover's algorithm
         "patterns": ["AES-128", "3DES", "DES", "SHA-1", "SHA1", "MD5", "RC4", "AES", "AES128"],
         "remediation": "Aumentar o tamanho da chave/hash (ex: migrar para AES-256 ou SHA-3)",
         "nist_standard": None
     },
     "SAFE": {
-        "description": "Resistente à Computação Quântica (PQC ou Cifras Simétricas Longas)",
+        "description": "Resistente à Computação Quântica",
         # Large-key symmetric primitives and PQC standards
         "patterns": [
             "AES-256", "AES256", "SHA-3", "SHA-512", "SHA512", "SHA-256", "SHA256",

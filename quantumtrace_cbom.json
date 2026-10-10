@@ -1,7 +1,7 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-  "serialNumber": "urn:uuid:f71c0d84-fe86-41e3-87c7-a4469102e5c8",
+  "serialNumber": "urn:uuid:4874b3a8-c239-4598-b717-39090feac892",
   "version": 1,
   "metadata": {
     "component": {
@@ -12,187 +12,46 @@
   "components": [
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:3c988ec3-2d94-4cb4-9121-1d04e43c3ce4",
-      "name": "from cryptography",
-      "description": "Encontrado em: webhook_signature.py:1",
+      "bom-ref": "urn:uuid:08781b1a-7de2-4c0b-9c24-90ce3d9a5150",
+      "name": "rsa",
+      "description": "Encontrado em: main.go:6",
       "cryptoProperties": {
-        "assetType": "library",
-        "quantumSecurityStatus": "REVIEW",
-        "riskJustification": "Lib"
+        "assetType": "algorithm",
+        "quantumSecurityStatus": "CRITICAL",
+        "riskJustification": "Vulner\u00e1vel ao Algoritmo de Shor"
       }
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:80c87fee-77d8-4862-95e2-0036b492147d",
+      "bom-ref": "urn:uuid:80be5e6e-a3d1-4a8d-b690-c980a2a2f2e2",
       "name": "sha1",
-      "description": "Encontrado em: update_feed.py:5",
+      "description": "Encontrado em: main.go:7",
       "cryptoProperties": {
         "assetType": "algorithm",
         "quantumSecurityStatus": "MEDIUM",
-        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
+        "riskJustification": "Enfraquecido pelo Algoritmo de Grover"
       }
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:f0b9781b-967a-4a72-9b70-96f3d1985b27",
-      "name": "from cryptography",
-      "description": "Encontrado em: report_export.py:3",
-      "cryptoProperties": {
-        "assetType": "library",
-        "quantumSecurityStatus": "REVIEW",
-        "riskJustification": "Lib"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:7e531b37-4f8a-40be-82a1-0713c310da9a",
-      "name": "AES",
-      "description": "Encontrado em: report_export.py:11",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "quantumSecurityStatus": "MEDIUM",
-        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:f21cf6c4-09b5-48d7-bc96-fec97589dbba",
-      "name": "from cryptography",
-      "description": "Encontrado em: member_credentials.py:3",
-      "cryptoProperties": {
-        "assetType": "library",
-        "quantumSecurityStatus": "REVIEW",
-        "riskJustification": "Lib"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:bfa93a0a-f4b4-4556-ba31-3f8c27d8198f",
-      "name": "from cryptography",
-      "description": "Encontrado em: member_credentials.py:4",
-      "cryptoProperties": {
-        "assetType": "library",
-        "quantumSecurityStatus": "REVIEW",
-        "riskJustification": "Lib"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:0c11da9f-3e06-4d9e-8aca-ef997252080e",
-      "name": "SHA256",
-      "description": "Encontrado em: member_credentials.py:13",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "quantumSecurityStatus": "SAFE",
-        "riskJustification": "Resistente \u00e0 Computa\u00e7\u00e3o Qu\u00e2ntica (PQC ou Cifras Sim\u00e9tricas Longas)",
-        "algorithmProperties": {
-          "parameterSetIdentifier": "256"
-        }
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:6e04cd69-63c6-41cd-86b9-42edd419a5ba",
-      "name": "SHA256",
-      "description": "Encontrado em: member_credentials.py:18",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "quantumSecurityStatus": "SAFE",
-        "riskJustification": "Resistente \u00e0 Computa\u00e7\u00e3o Qu\u00e2ntica (PQC ou Cifras Sim\u00e9tricas Longas)",
-        "algorithmProperties": {
-          "parameterSetIdentifier": "256"
-        }
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:cbfdf712-d68c-48a5-900f-4e2725484fac",
-      "name": "md5",
-      "description": "Encontrado em: legacy_accounts.py:5",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "quantumSecurityStatus": "MEDIUM",
-        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:8a2b224f-e95e-418b-a91c-45ac896301ef",
-      "name": "from cryptography",
-      "description": "Encontrado em: secure_transfer.py:3",
-      "cryptoProperties": {
-        "assetType": "library",
-        "quantumSecurityStatus": "REVIEW",
-        "riskJustification": "Lib"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:7c731550-a2d5-42f4-9e11-89a59dc1f898",
-      "name": "from cryptography",
-      "description": "Encontrado em: secure_transfer.py:4",
-      "cryptoProperties": {
-        "assetType": "library",
-        "quantumSecurityStatus": "REVIEW",
-        "riskJustification": "Lib"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:ac54f941-0693-4d77-80f8-e733559d6b7f",
-      "name": "sha256",
-      "description": "Encontrado em: artifact_manifest.py:14",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "quantumSecurityStatus": "SAFE",
-        "riskJustification": "Resistente \u00e0 Computa\u00e7\u00e3o Qu\u00e2ntica (PQC ou Cifras Sim\u00e9tricas Longas)",
-        "algorithmProperties": {
-          "parameterSetIdentifier": "256"
-        }
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:5a7a9cae-9b5a-44fa-91ee-630f1e8f372a",
-      "name": "from cryptography",
-      "description": "Encontrado em: license_token.py:1",
-      "cryptoProperties": {
-        "assetType": "library",
-        "quantumSecurityStatus": "REVIEW",
-        "riskJustification": "Lib"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:94b273e7-8278-42d4-9f5f-603ace0cf02b",
+      "bom-ref": "urn:uuid:d12faf89-9884-43ae-bbec-012ff5cf75a7",
       "name": "rsa",
-      "description": "Encontrado em: license_token.py:2",
+      "description": "Encontrado em: main.go:12",
       "cryptoProperties": {
         "assetType": "algorithm",
         "quantumSecurityStatus": "CRITICAL",
-        "riskJustification": "Vulner\u00e1vel ao Algoritmo de Shor (Criptografia Assim\u00e9trica Cl\u00e1ssica)"
+        "riskJustification": "Vulner\u00e1vel ao Algoritmo de Shor"
       }
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:3774bc93-0d4f-491e-882d-4b7fcddd8ffa",
-      "name": "from cryptography",
-      "description": "Encontrado em: license_token.py:2",
-      "cryptoProperties": {
-        "assetType": "library",
-        "quantumSecurityStatus": "REVIEW",
-        "riskJustification": "Lib"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:d13e7c92-4ae5-4578-a9b7-47c75c4bf27a",
+      "bom-ref": "urn:uuid:ef063d17-a7c4-4dcc-93be-efca99059eba",
       "name": "rsa",
-      "description": "Encontrado em: license_token.py:6",
+      "description": "Encontrado em: main.go:13",
       "cryptoProperties": {
         "assetType": "algorithm",
         "quantumSecurityStatus": "CRITICAL",
-        "riskJustification": "Vulner\u00e1vel ao Algoritmo de Shor (Criptografia Assim\u00e9trica Cl\u00e1ssica)",
+        "riskJustification": "Vulner\u00e1vel ao Algoritmo de Shor",
         "algorithmProperties": {
           "parameterSetIdentifier": "1024"
         }
@@ -200,249 +59,339 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:2cf9cbe1-9a63-4933-8172-7e8e5d4a87f6",
-      "name": "SHA1",
-      "description": "Encontrado em: license_token.py:11",
+      "bom-ref": "urn:uuid:4d3ea00b-f026-4257-91e1-351865e414fb",
+      "name": "rsa",
+      "description": "Encontrado em: main.go:16",
       "cryptoProperties": {
         "assetType": "algorithm",
-        "quantumSecurityStatus": "MEDIUM",
-        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
+        "quantumSecurityStatus": "CRITICAL",
+        "riskJustification": "Vulner\u00e1vel ao Algoritmo de Shor"
       }
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:a6c84a48-30e5-44cb-aba3-2db90e675e4d",
-      "name": "SHA1",
-      "description": "Encontrado em: license_token.py:16",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "quantumSecurityStatus": "MEDIUM",
-        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:a2a6b822-e703-480e-b7a9-9a0c8f8bc672",
-      "name": "import java.security",
-      "description": "Encontrado em: ConfigSync.java:1",
-      "cryptoProperties": {
-        "assetType": "library",
-        "quantumSecurityStatus": "REVIEW",
-        "riskJustification": "Lib"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:32e162ce-ac0f-4eb8-8e9c-cfa24d12c299",
-      "name": "import javax.crypto",
-      "description": "Encontrado em: ConfigSync.java:4",
-      "cryptoProperties": {
-        "assetType": "library",
-        "quantumSecurityStatus": "REVIEW",
-        "riskJustification": "Lib"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:958d93b7-6c9b-49ae-a6c3-c765481b921e",
-      "name": "import javax.crypto",
-      "description": "Encontrado em: ConfigSync.java:5",
-      "cryptoProperties": {
-        "assetType": "library",
-        "quantumSecurityStatus": "REVIEW",
-        "riskJustification": "Lib"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:d8f2632e-87c2-4c5d-84b0-48f4d4b937ec",
-      "name": "import java.security",
-      "description": "Encontrado em: PatchFeed.java:1",
-      "cryptoProperties": {
-        "assetType": "library",
-        "quantumSecurityStatus": "REVIEW",
-        "riskJustification": "Lib"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:f42ed9bf-7ad7-4372-b8e6-4d2fa5e96d8a",
+      "bom-ref": "urn:uuid:1f4daacf-a182-45c1-9be3-e9e6752636ad",
       "name": "sha1",
-      "description": "Encontrado em: PatchFeed.java:8",
+      "description": "Encontrado em: main.go:17",
       "cryptoProperties": {
         "assetType": "algorithm",
         "quantumSecurityStatus": "MEDIUM",
-        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
+        "riskJustification": "Enfraquecido pelo Algoritmo de Grover"
       }
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:8a4f05a0-1683-4cba-b0bd-5ac92d4debf5",
-      "name": "SHA-1",
-      "description": "Encontrado em: PatchFeed.java:8",
+      "bom-ref": "urn:uuid:9b700c21-1c07-4393-9717-04981decf5c1",
+      "name": "rsa",
+      "description": "Encontrado em: main.go:18",
       "cryptoProperties": {
         "assetType": "algorithm",
-        "quantumSecurityStatus": "MEDIUM",
-        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
+        "quantumSecurityStatus": "CRITICAL",
+        "riskJustification": "Vulner\u00e1vel ao Algoritmo de Shor"
       }
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:c95906f3-33fa-4629-ac99-308d2b28f028",
+      "bom-ref": "urn:uuid:0d145542-9f0d-4427-b792-a299b0b1c71b",
+      "name": "SHA1",
+      "description": "Encontrado em: main.go:18",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "quantumSecurityStatus": "MEDIUM",
+        "riskJustification": "Enfraquecido pelo Algoritmo de Grover"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:eb518f40-a742-4702-bf34-bdf32d4eb31c",
+      "name": "rsa",
+      "description": "Encontrado em: main.go:21",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "quantumSecurityStatus": "CRITICAL",
+        "riskJustification": "Vulner\u00e1vel ao Algoritmo de Shor"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:0d800ccc-8fe5-428b-8ba9-2a53a4eb277a",
       "name": "sha1",
-      "description": "Encontrado em: PatchFeed.java:9",
+      "description": "Encontrado em: main.go:22",
       "cryptoProperties": {
         "assetType": "algorithm",
         "quantumSecurityStatus": "MEDIUM",
-        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
+        "riskJustification": "Enfraquecido pelo Algoritmo de Grover"
       }
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:2822ad68-b3e0-42a5-9bcd-b57bae2b1d34",
-      "name": "import java.security",
-      "description": "Encontrado em: CustomerDirectory.java:1",
+      "bom-ref": "urn:uuid:302a1eb2-1d73-445a-8a97-9e8c00888b3b",
+      "name": "rsa",
+      "description": "Encontrado em: main.go:23",
       "cryptoProperties": {
-        "assetType": "library",
-        "quantumSecurityStatus": "REVIEW",
-        "riskJustification": "Lib"
+        "assetType": "algorithm",
+        "quantumSecurityStatus": "CRITICAL",
+        "riskJustification": "Vulner\u00e1vel ao Algoritmo de Shor"
       }
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:53e477f8-01eb-484d-8d89-de144be5df1b",
+      "bom-ref": "urn:uuid:31690917-a233-49fb-b98c-ca22e7e7e81b",
+      "name": "SHA1",
+      "description": "Encontrado em: main.go:23",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "quantumSecurityStatus": "MEDIUM",
+        "riskJustification": "Enfraquecido pelo Algoritmo de Grover"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:f4d0776e-ee40-43f9-8973-1f284166c90f",
+      "name": "sha256",
+      "description": "Encontrado em: main.go:6",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "quantumSecurityStatus": "SAFE",
+        "riskJustification": "Resistente \u00e0 Computa\u00e7\u00e3o Qu\u00e2ntica",
+        "algorithmProperties": {
+          "parameterSetIdentifier": "256"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:70afd1bb-ee55-437f-989c-06c6ddc6f57f",
+      "name": "sha256",
+      "description": "Encontrado em: main.go:20",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "quantumSecurityStatus": "SAFE",
+        "riskJustification": "Resistente \u00e0 Computa\u00e7\u00e3o Qu\u00e2ntica",
+        "algorithmProperties": {
+          "parameterSetIdentifier": "256"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:03b78c47-0cee-4ded-9a5c-6acfa1a25192",
+      "name": "sha256",
+      "description": "Encontrado em: main.go:25",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "quantumSecurityStatus": "SAFE",
+        "riskJustification": "Resistente \u00e0 Computa\u00e7\u00e3o Qu\u00e2ntica",
+        "algorithmProperties": {
+          "parameterSetIdentifier": "256"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:6973356b-c96f-40c8-9742-c40347d57a88",
+      "name": "sha256",
+      "description": "Encontrado em: main.go:34",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "quantumSecurityStatus": "SAFE",
+        "riskJustification": "Resistente \u00e0 Computa\u00e7\u00e3o Qu\u00e2ntica",
+        "algorithmProperties": {
+          "parameterSetIdentifier": "256"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:51924889-7d23-4837-bf16-357a60ebd699",
+      "name": "sha1",
+      "description": "Encontrado em: main.go:4",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "quantumSecurityStatus": "MEDIUM",
+        "riskJustification": "Enfraquecido pelo Algoritmo de Grover"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:28e66e34-8283-4c77-87b0-4b3961d2e70f",
+      "name": "sha1",
+      "description": "Encontrado em: main.go:10",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "quantumSecurityStatus": "MEDIUM",
+        "riskJustification": "Enfraquecido pelo Algoritmo de Grover"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:14e28f6f-97c5-4ee0-afc7-cee68ae7e47f",
+      "name": "aes",
+      "description": "Encontrado em: main.go:5",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "quantumSecurityStatus": "MEDIUM",
+        "riskJustification": "Enfraquecido pelo Algoritmo de Grover"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:382fd219-4b36-415d-bb88-a781aad6f3be",
+      "name": "aes",
+      "description": "Encontrado em: main.go:23",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "quantumSecurityStatus": "MEDIUM",
+        "riskJustification": "Enfraquecido pelo Algoritmo de Grover"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:524d00e9-0639-4ace-bc8b-80c813ad3936",
+      "name": "aes",
+      "description": "Encontrado em: main.go:40",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "quantumSecurityStatus": "MEDIUM",
+        "riskJustification": "Enfraquecido pelo Algoritmo de Grover"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:b634b7c8-ec7a-420c-b203-02b49b975e11",
+      "name": "sha256",
+      "description": "Encontrado em: main.go:5",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "quantumSecurityStatus": "SAFE",
+        "riskJustification": "Resistente \u00e0 Computa\u00e7\u00e3o Qu\u00e2ntica",
+        "algorithmProperties": {
+          "parameterSetIdentifier": "256"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:a61a217c-9ccc-42f5-9be3-4160048b6944",
+      "name": "sha512",
+      "description": "Encontrado em: main.go:6",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "quantumSecurityStatus": "SAFE",
+        "riskJustification": "Resistente \u00e0 Computa\u00e7\u00e3o Qu\u00e2ntica",
+        "algorithmProperties": {
+          "parameterSetIdentifier": "512"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:3140069f-c530-4d02-8917-1703ff5b8ed9",
+      "name": "sha512",
+      "description": "Encontrado em: main.go:13",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "quantumSecurityStatus": "SAFE",
+        "riskJustification": "Resistente \u00e0 Computa\u00e7\u00e3o Qu\u00e2ntica",
+        "algorithmProperties": {
+          "parameterSetIdentifier": "512"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:a8d2e59b-7812-43d0-a6a8-4aabdcaa912c",
+      "name": "sha256",
+      "description": "Encontrado em: main.go:22",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "quantumSecurityStatus": "SAFE",
+        "riskJustification": "Resistente \u00e0 Computa\u00e7\u00e3o Qu\u00e2ntica",
+        "algorithmProperties": {
+          "parameterSetIdentifier": "256"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:25f6f56b-b6ca-4520-8f94-a55f36b703f1",
+      "name": "aes",
+      "description": "Encontrado em: main.go:4",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "quantumSecurityStatus": "MEDIUM",
+        "riskJustification": "Enfraquecido pelo Algoritmo de Grover"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:762d7b7e-18e5-4f41-920d-206f8141d972",
+      "name": "aes",
+      "description": "Encontrado em: main.go:22",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "quantumSecurityStatus": "MEDIUM",
+        "riskJustification": "Enfraquecido pelo Algoritmo de Grover"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:77991836-1246-4873-981e-0ad20715d6c6",
+      "name": "aes",
+      "description": "Encontrado em: main.go:26",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "quantumSecurityStatus": "MEDIUM",
+        "riskJustification": "Enfraquecido pelo Algoritmo de Grover"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:f8ef830b-db3e-4ab2-ba2c-c16a59a00522",
+      "name": "aes",
+      "description": "Encontrado em: main.go:28",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "quantumSecurityStatus": "MEDIUM",
+        "riskJustification": "Enfraquecido pelo Algoritmo de Grover"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:920b2f15-2b46-44ff-af68-685680bf38ac",
+      "name": "aes",
+      "description": "Encontrado em: main.go:29",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "quantumSecurityStatus": "MEDIUM",
+        "riskJustification": "Enfraquecido pelo Algoritmo de Grover"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:3776a0a4-dd7d-4437-b480-68ed275278e9",
       "name": "md5",
-      "description": "Encontrado em: CustomerDirectory.java:8",
+      "description": "Encontrado em: main.go:4",
       "cryptoProperties": {
         "assetType": "algorithm",
         "quantumSecurityStatus": "MEDIUM",
-        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
+        "riskJustification": "Enfraquecido pelo Algoritmo de Grover"
       }
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:82c28dd1-b7ff-4a3d-9395-2f6be13ac490",
-      "name": "MD5",
-      "description": "Encontrado em: CustomerDirectory.java:8",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "quantumSecurityStatus": "MEDIUM",
-        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:f744cfe9-9922-4d35-adc6-a03408a29c73",
+      "bom-ref": "urn:uuid:ae7bbabc-73ed-4577-9bfd-06883155f519",
       "name": "md5",
-      "description": "Encontrado em: CustomerDirectory.java:9",
+      "description": "Encontrado em: main.go:10",
       "cryptoProperties": {
         "assetType": "algorithm",
         "quantumSecurityStatus": "MEDIUM",
-        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
+        "riskJustification": "Enfraquecido pelo Algoritmo de Grover"
       }
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:b17d10b5-9a07-4780-893b-1e85a3d5e048",
-      "name": "import java.security",
-      "description": "Encontrado em: DeviceAttestation.java:1",
-      "cryptoProperties": {
-        "assetType": "library",
-        "quantumSecurityStatus": "REVIEW",
-        "riskJustification": "Lib"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:fa3743c7-b705-4bea-b6a7-c8cd959bd7b7",
-      "name": "import java.security",
-      "description": "Encontrado em: DeviceAttestation.java:2",
-      "cryptoProperties": {
-        "assetType": "library",
-        "quantumSecurityStatus": "REVIEW",
-        "riskJustification": "Lib"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:cc4b7614-b8af-41b9-a09f-3572fbfaa49e",
-      "name": "import java.security",
-      "description": "Encontrado em: DeviceAttestation.java:3",
-      "cryptoProperties": {
-        "assetType": "library",
-        "quantumSecurityStatus": "REVIEW",
-        "riskJustification": "Lib"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:bee485be-1e21-498f-ade9-0f0014bef49c",
-      "name": "import java.security",
-      "description": "Encontrado em: DeviceAttestation.java:4",
-      "cryptoProperties": {
-        "assetType": "library",
-        "quantumSecurityStatus": "REVIEW",
-        "riskJustification": "Lib"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:b675d35c-934c-4c5a-b232-f30a59aa07d7",
-      "name": "import java.security",
-      "description": "Encontrado em: DeviceAttestation.java:5",
-      "cryptoProperties": {
-        "assetType": "library",
-        "quantumSecurityStatus": "REVIEW",
-        "riskJustification": "Lib"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:f7d5c82a-e6be-4715-9edf-db278eb6939d",
-      "name": "import java.security",
-      "description": "Encontrado em: IdentityVault.java:1",
-      "cryptoProperties": {
-        "assetType": "library",
-        "quantumSecurityStatus": "REVIEW",
-        "riskJustification": "Lib"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:31837f56-6e19-4942-875e-e7241019168e",
-      "name": "import java.security",
-      "description": "Encontrado em: IdentityVault.java:2",
-      "cryptoProperties": {
-        "assetType": "library",
-        "quantumSecurityStatus": "REVIEW",
-        "riskJustification": "Lib"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:3423b69c-0301-4421-aa62-bf014a1457be",
-      "name": "import javax.crypto",
-      "description": "Encontrado em: IdentityVault.java:5",
-      "cryptoProperties": {
-        "assetType": "library",
-        "quantumSecurityStatus": "REVIEW",
-        "riskJustification": "Lib"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:75d7a1d0-2270-4ff0-9a48-69585598d65c",
-      "name": "import javax.crypto",
-      "description": "Encontrado em: IdentityVault.java:6",
-      "cryptoProperties": {
-        "assetType": "library",
-        "quantumSecurityStatus": "REVIEW",
-        "riskJustification": "Lib"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:b98660e2-7bcd-4ca0-a0b6-922029d577e9",
+      "bom-ref": "urn:uuid:abd6d4d4-a783-4c72-ba0e-83c326b08d1a",
       "name": "import javax.crypto",
       "description": "Encontrado em: BatchExporter.java:2",
       "cryptoProperties": {
@@ -453,7 +402,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:069dadee-8a33-4f6e-8e60-80e898a826e0",
+      "bom-ref": "urn:uuid:acb36078-bb42-41ee-ae2d-90f68aba2540",
       "name": "import javax.crypto",
       "description": "Encontrado em: BatchExporter.java:3",
       "cryptoProperties": {
@@ -464,95 +413,29 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:9ceeb18d-fda6-43be-a475-44ddbac2880c",
+      "bom-ref": "urn:uuid:07bbd5e6-6305-4197-9b95-79d611b77c59",
       "name": "AES",
       "description": "Encontrado em: BatchExporter.java:10",
       "cryptoProperties": {
         "assetType": "algorithm",
         "quantumSecurityStatus": "MEDIUM",
-        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
+        "riskJustification": "Enfraquecido pelo Algoritmo de Grover"
       }
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:f50615a8-0bd0-405b-ae07-e0cc06829c6c",
+      "bom-ref": "urn:uuid:247feab0-8b41-4176-912a-3a5c3007dcbf",
       "name": "AES",
       "description": "Encontrado em: BatchExporter.java:13",
       "cryptoProperties": {
         "assetType": "algorithm",
         "quantumSecurityStatus": "MEDIUM",
-        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
+        "riskJustification": "Enfraquecido pelo Algoritmo de Grover"
       }
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:55a633a2-ce5d-4eaf-bab4-3966654dc942",
-      "name": "import java.security",
-      "description": "Encontrado em: ReceiptSigner.java:1",
-      "cryptoProperties": {
-        "assetType": "library",
-        "quantumSecurityStatus": "REVIEW",
-        "riskJustification": "Lib"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:32741a0f-d336-43cf-bfe8-92d9a628fe07",
-      "name": "import java.security",
-      "description": "Encontrado em: ReceiptSigner.java:2",
-      "cryptoProperties": {
-        "assetType": "library",
-        "quantumSecurityStatus": "REVIEW",
-        "riskJustification": "Lib"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:e5e41d27-8bb1-41cc-977a-856744b3f287",
-      "name": "import java.security",
-      "description": "Encontrado em: ReceiptSigner.java:3",
-      "cryptoProperties": {
-        "assetType": "library",
-        "quantumSecurityStatus": "REVIEW",
-        "riskJustification": "Lib"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:90c0f63a-37b6-4667-9ef2-0741b42378ff",
-      "name": "import java.security",
-      "description": "Encontrado em: ReceiptSigner.java:4",
-      "cryptoProperties": {
-        "assetType": "library",
-        "quantumSecurityStatus": "REVIEW",
-        "riskJustification": "Lib"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:051a1eb8-eb47-4e99-aac8-2478834be4fb",
-      "name": "import java.security",
-      "description": "Encontrado em: ReceiptSigner.java:5",
-      "cryptoProperties": {
-        "assetType": "library",
-        "quantumSecurityStatus": "REVIEW",
-        "riskJustification": "Lib"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:4bd14d9f-c397-476b-97fc-a8c4c3d4ec59",
-      "name": "RSA",
-      "description": "Encontrado em: ReceiptSigner.java:12",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "quantumSecurityStatus": "CRITICAL",
-        "riskJustification": "Vulner\u00e1vel ao Algoritmo de Shor (Criptografia Assim\u00e9trica Cl\u00e1ssica)"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:a2a193a2-12e2-4541-8618-634b5d426e45",
+      "bom-ref": "urn:uuid:9b861560-31bd-4acc-b71f-c73aa6d0fa9c",
       "name": "import java.security",
       "description": "Encontrado em: SessionCipher.java:1",
       "cryptoProperties": {
@@ -563,7 +446,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:7fca2f46-a300-4668-8211-82f363b45a8f",
+      "bom-ref": "urn:uuid:e3df7bfa-5266-479a-8e63-2f152a16c89d",
       "name": "import javax.crypto",
       "description": "Encontrado em: SessionCipher.java:2",
       "cryptoProperties": {
@@ -574,7 +457,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:392a0250-7b89-490f-adab-c2fc240adff8",
+      "bom-ref": "urn:uuid:9bc7725c-7f75-4711-a3d1-46a10ad6f3ae",
       "name": "import javax.crypto",
       "description": "Encontrado em: SessionCipher.java:3",
       "cryptoProperties": {
@@ -585,7 +468,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:4cc8ccf4-eb07-4d6f-a453-466c11f591a9",
+      "bom-ref": "urn:uuid:c0626f0a-9f1b-4228-8dad-08287ab0e9d7",
       "name": "import javax.crypto",
       "description": "Encontrado em: SessionCipher.java:4",
       "cryptoProperties": {
@@ -596,7 +479,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:22ec2685-6f90-4b1d-a5dd-09dcc42995d1",
+      "bom-ref": "urn:uuid:a76ab963-74b5-4705-aee5-740d8b31653b",
       "name": "import javax.crypto",
       "description": "Encontrado em: SessionCipher.java:5",
       "cryptoProperties": {
@@ -607,312 +490,423 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:832e431a-220a-4f95-804d-98329b742a5d",
+      "bom-ref": "urn:uuid:de9e99c9-f3c9-4c7d-8534-d79736f04ea6",
       "name": "AES",
       "description": "Encontrado em: SessionCipher.java:12",
       "cryptoProperties": {
         "assetType": "algorithm",
         "quantumSecurityStatus": "MEDIUM",
-        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
+        "riskJustification": "Enfraquecido pelo Algoritmo de Grover"
       }
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:df65ac10-5c97-4841-9b44-cdaad608ff44",
+      "bom-ref": "urn:uuid:c00fb68b-665f-4fc1-81d7-69165ef3421b",
       "name": "AES",
       "description": "Encontrado em: SessionCipher.java:18",
       "cryptoProperties": {
         "assetType": "algorithm",
         "quantumSecurityStatus": "MEDIUM",
-        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
+        "riskJustification": "Enfraquecido pelo Algoritmo de Grover"
       }
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:7bcd75d7-ea1b-4812-966e-7abc5cee330e",
-      "name": "sha256",
-      "description": "Encontrado em: main.go:5",
+      "bom-ref": "urn:uuid:15ea8f46-d3b8-4069-bbfa-76481108e43c",
+      "name": "import java.security",
+      "description": "Encontrado em: ReceiptSigner.java:1",
+      "cryptoProperties": {
+        "assetType": "library",
+        "quantumSecurityStatus": "REVIEW",
+        "riskJustification": "Lib"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:baf881b7-4bda-4fc7-a7e7-8e59a3128f94",
+      "name": "import java.security",
+      "description": "Encontrado em: ReceiptSigner.java:2",
+      "cryptoProperties": {
+        "assetType": "library",
+        "quantumSecurityStatus": "REVIEW",
+        "riskJustification": "Lib"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:4020a2d1-6f59-4ed5-992f-55b344ae1ae0",
+      "name": "import java.security",
+      "description": "Encontrado em: ReceiptSigner.java:3",
+      "cryptoProperties": {
+        "assetType": "library",
+        "quantumSecurityStatus": "REVIEW",
+        "riskJustification": "Lib"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:e469ee5b-5840-4a13-8d34-0e34da916594",
+      "name": "import java.security",
+      "description": "Encontrado em: ReceiptSigner.java:4",
+      "cryptoProperties": {
+        "assetType": "library",
+        "quantumSecurityStatus": "REVIEW",
+        "riskJustification": "Lib"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:83556b4b-f864-4936-87cb-eb282a529f9e",
+      "name": "import java.security",
+      "description": "Encontrado em: ReceiptSigner.java:5",
+      "cryptoProperties": {
+        "assetType": "library",
+        "quantumSecurityStatus": "REVIEW",
+        "riskJustification": "Lib"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:c7da523e-20fd-42e3-a746-03d3cd28b8c8",
+      "name": "RSA",
+      "description": "Encontrado em: ReceiptSigner.java:12",
       "cryptoProperties": {
         "assetType": "algorithm",
-        "quantumSecurityStatus": "SAFE",
-        "riskJustification": "Resistente \u00e0 Computa\u00e7\u00e3o Qu\u00e2ntica (PQC ou Cifras Sim\u00e9tricas Longas)",
-        "algorithmProperties": {
-          "parameterSetIdentifier": "256"
-        }
+        "quantumSecurityStatus": "CRITICAL",
+        "riskJustification": "Vulner\u00e1vel ao Algoritmo de Shor"
       }
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:6098cf23-3042-4656-b0f5-96b8aa21d595",
-      "name": "sha512",
-      "description": "Encontrado em: main.go:6",
+      "bom-ref": "urn:uuid:de2796c0-c02f-4a3d-9642-92bade9e5f49",
+      "name": "import java.security",
+      "description": "Encontrado em: PatchFeed.java:1",
       "cryptoProperties": {
-        "assetType": "algorithm",
-        "quantumSecurityStatus": "SAFE",
-        "riskJustification": "Resistente \u00e0 Computa\u00e7\u00e3o Qu\u00e2ntica (PQC ou Cifras Sim\u00e9tricas Longas)",
-        "algorithmProperties": {
-          "parameterSetIdentifier": "512"
-        }
+        "assetType": "library",
+        "quantumSecurityStatus": "REVIEW",
+        "riskJustification": "Lib"
       }
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:ba1f3bac-2c08-48c1-ae6b-1438ae7877c8",
-      "name": "sha512",
-      "description": "Encontrado em: main.go:13",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "quantumSecurityStatus": "SAFE",
-        "riskJustification": "Resistente \u00e0 Computa\u00e7\u00e3o Qu\u00e2ntica (PQC ou Cifras Sim\u00e9tricas Longas)",
-        "algorithmProperties": {
-          "parameterSetIdentifier": "512"
-        }
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:4b5d39aa-5f43-444e-a979-5c49934ffc7d",
-      "name": "sha256",
-      "description": "Encontrado em: main.go:22",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "quantumSecurityStatus": "SAFE",
-        "riskJustification": "Resistente \u00e0 Computa\u00e7\u00e3o Qu\u00e2ntica (PQC ou Cifras Sim\u00e9tricas Longas)",
-        "algorithmProperties": {
-          "parameterSetIdentifier": "256"
-        }
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:f8d8c8ba-4314-4d04-8b7c-2f750a51f12f",
-      "name": "sha256",
-      "description": "Encontrado em: main.go:6",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "quantumSecurityStatus": "SAFE",
-        "riskJustification": "Resistente \u00e0 Computa\u00e7\u00e3o Qu\u00e2ntica (PQC ou Cifras Sim\u00e9tricas Longas)",
-        "algorithmProperties": {
-          "parameterSetIdentifier": "256"
-        }
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:e9df876b-dbb6-45bf-8d13-bcd6447904e9",
-      "name": "sha256",
-      "description": "Encontrado em: main.go:20",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "quantumSecurityStatus": "SAFE",
-        "riskJustification": "Resistente \u00e0 Computa\u00e7\u00e3o Qu\u00e2ntica (PQC ou Cifras Sim\u00e9tricas Longas)",
-        "algorithmProperties": {
-          "parameterSetIdentifier": "256"
-        }
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:60edfb52-c3fe-484c-9fda-7f83457019e5",
-      "name": "sha256",
-      "description": "Encontrado em: main.go:25",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "quantumSecurityStatus": "SAFE",
-        "riskJustification": "Resistente \u00e0 Computa\u00e7\u00e3o Qu\u00e2ntica (PQC ou Cifras Sim\u00e9tricas Longas)",
-        "algorithmProperties": {
-          "parameterSetIdentifier": "256"
-        }
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:7a45a793-6237-42d4-8e32-e5b3bf03f48b",
-      "name": "sha256",
-      "description": "Encontrado em: main.go:34",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "quantumSecurityStatus": "SAFE",
-        "riskJustification": "Resistente \u00e0 Computa\u00e7\u00e3o Qu\u00e2ntica (PQC ou Cifras Sim\u00e9tricas Longas)",
-        "algorithmProperties": {
-          "parameterSetIdentifier": "256"
-        }
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:05fe3f94-0c6f-4356-be9a-987b15bcc527",
-      "name": "aes",
-      "description": "Encontrado em: main.go:4",
+      "bom-ref": "urn:uuid:d8fc101a-2116-40ad-b797-3e97b3f989a3",
+      "name": "SHA-1",
+      "description": "Encontrado em: PatchFeed.java:8",
       "cryptoProperties": {
         "assetType": "algorithm",
         "quantumSecurityStatus": "MEDIUM",
-        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
+        "riskJustification": "Enfraquecido pelo Algoritmo de Grover"
       }
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:81297a87-d2f2-40b4-83ac-5bbf54ebeb36",
-      "name": "aes",
-      "description": "Encontrado em: main.go:22",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "quantumSecurityStatus": "MEDIUM",
-        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:bb516d3a-619d-46e0-8780-ef7f1511e64d",
-      "name": "aes",
-      "description": "Encontrado em: main.go:26",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "quantumSecurityStatus": "MEDIUM",
-        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:26964500-a5ed-4935-8b6f-4ce752d2f1f8",
-      "name": "aes",
-      "description": "Encontrado em: main.go:28",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "quantumSecurityStatus": "MEDIUM",
-        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:f558200b-3418-479a-959e-7d596e562c75",
-      "name": "aes",
-      "description": "Encontrado em: main.go:29",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "quantumSecurityStatus": "MEDIUM",
-        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:9c388664-0cff-4f56-80ef-5cce0cab8e16",
+      "bom-ref": "urn:uuid:12fd197f-772c-41e9-bdcd-e3a8104b4466",
       "name": "sha1",
-      "description": "Encontrado em: main.go:4",
+      "description": "Encontrado em: PatchFeed.java:8",
       "cryptoProperties": {
         "assetType": "algorithm",
         "quantumSecurityStatus": "MEDIUM",
-        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
+        "riskJustification": "Enfraquecido pelo Algoritmo de Grover"
       }
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:7c8a091c-86eb-448b-b217-0b6ee9630094",
+      "bom-ref": "urn:uuid:c293c40f-5c09-45f3-8bfc-711a2b63b544",
       "name": "sha1",
-      "description": "Encontrado em: main.go:10",
+      "description": "Encontrado em: PatchFeed.java:9",
       "cryptoProperties": {
         "assetType": "algorithm",
         "quantumSecurityStatus": "MEDIUM",
-        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
+        "riskJustification": "Enfraquecido pelo Algoritmo de Grover"
       }
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:68501d12-de95-45c8-a191-c3b04de692e3",
+      "bom-ref": "urn:uuid:993aa617-48c7-431f-83d6-9861e5c970ca",
+      "name": "import java.security",
+      "description": "Encontrado em: IdentityVault.java:1",
+      "cryptoProperties": {
+        "assetType": "library",
+        "quantumSecurityStatus": "REVIEW",
+        "riskJustification": "Lib"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:b45708c2-a19c-4f83-a248-b30e30e15ca1",
+      "name": "import java.security",
+      "description": "Encontrado em: IdentityVault.java:2",
+      "cryptoProperties": {
+        "assetType": "library",
+        "quantumSecurityStatus": "REVIEW",
+        "riskJustification": "Lib"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:884ac41a-2a7e-4af7-a249-dbf3a81a5b80",
+      "name": "import javax.crypto",
+      "description": "Encontrado em: IdentityVault.java:5",
+      "cryptoProperties": {
+        "assetType": "library",
+        "quantumSecurityStatus": "REVIEW",
+        "riskJustification": "Lib"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:03e76c32-1f37-430e-8ddd-f49b6fd34737",
+      "name": "import javax.crypto",
+      "description": "Encontrado em: IdentityVault.java:6",
+      "cryptoProperties": {
+        "assetType": "library",
+        "quantumSecurityStatus": "REVIEW",
+        "riskJustification": "Lib"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:6588f9c4-99d7-413f-a37c-c9ad36c93b9b",
+      "name": "import java.security",
+      "description": "Encontrado em: ConfigSync.java:1",
+      "cryptoProperties": {
+        "assetType": "library",
+        "quantumSecurityStatus": "REVIEW",
+        "riskJustification": "Lib"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:f1a8890d-17e0-4c29-b2cf-de756d952d8d",
+      "name": "import javax.crypto",
+      "description": "Encontrado em: ConfigSync.java:4",
+      "cryptoProperties": {
+        "assetType": "library",
+        "quantumSecurityStatus": "REVIEW",
+        "riskJustification": "Lib"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:a20b3ae4-81de-40fd-a8ea-d6275348bf86",
+      "name": "import javax.crypto",
+      "description": "Encontrado em: ConfigSync.java:5",
+      "cryptoProperties": {
+        "assetType": "library",
+        "quantumSecurityStatus": "REVIEW",
+        "riskJustification": "Lib"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:839b4fda-748a-4ec5-8b2c-62b4808e5c62",
+      "name": "import java.security",
+      "description": "Encontrado em: DeviceAttestation.java:1",
+      "cryptoProperties": {
+        "assetType": "library",
+        "quantumSecurityStatus": "REVIEW",
+        "riskJustification": "Lib"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:72dbbc99-75fe-471d-b950-cd76d5e4000c",
+      "name": "import java.security",
+      "description": "Encontrado em: DeviceAttestation.java:2",
+      "cryptoProperties": {
+        "assetType": "library",
+        "quantumSecurityStatus": "REVIEW",
+        "riskJustification": "Lib"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:befa4e83-9a3c-4a87-896d-a4ca55ce280f",
+      "name": "import java.security",
+      "description": "Encontrado em: DeviceAttestation.java:3",
+      "cryptoProperties": {
+        "assetType": "library",
+        "quantumSecurityStatus": "REVIEW",
+        "riskJustification": "Lib"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:38f55bd7-f5a5-49b1-a620-185dc517e265",
+      "name": "import java.security",
+      "description": "Encontrado em: DeviceAttestation.java:4",
+      "cryptoProperties": {
+        "assetType": "library",
+        "quantumSecurityStatus": "REVIEW",
+        "riskJustification": "Lib"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:14e77f01-bf9a-472e-92ea-a09a2551feba",
+      "name": "import java.security",
+      "description": "Encontrado em: DeviceAttestation.java:5",
+      "cryptoProperties": {
+        "assetType": "library",
+        "quantumSecurityStatus": "REVIEW",
+        "riskJustification": "Lib"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:c2322198-cbad-4f7a-8ce9-e6892ab98af4",
+      "name": "import java.security",
+      "description": "Encontrado em: CustomerDirectory.java:1",
+      "cryptoProperties": {
+        "assetType": "library",
+        "quantumSecurityStatus": "REVIEW",
+        "riskJustification": "Lib"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:6931763d-61ca-4f0f-8226-96d5af0e0983",
       "name": "md5",
-      "description": "Encontrado em: main.go:4",
+      "description": "Encontrado em: CustomerDirectory.java:8",
       "cryptoProperties": {
         "assetType": "algorithm",
         "quantumSecurityStatus": "MEDIUM",
-        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
+        "riskJustification": "Enfraquecido pelo Algoritmo de Grover"
       }
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:2366c15e-b7ac-4a9f-8c1a-69a0a9a366f7",
+      "bom-ref": "urn:uuid:65d7e6df-dc68-4810-ba71-7b3db27b3230",
+      "name": "MD5",
+      "description": "Encontrado em: CustomerDirectory.java:8",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "quantumSecurityStatus": "MEDIUM",
+        "riskJustification": "Enfraquecido pelo Algoritmo de Grover"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:48ed9b2c-ddc0-439c-a7a3-0a881a464b3e",
       "name": "md5",
-      "description": "Encontrado em: main.go:10",
+      "description": "Encontrado em: CustomerDirectory.java:9",
       "cryptoProperties": {
         "assetType": "algorithm",
         "quantumSecurityStatus": "MEDIUM",
-        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
+        "riskJustification": "Enfraquecido pelo Algoritmo de Grover"
       }
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:927f64b4-6fd3-42f9-b005-a5b3a2c362d9",
-      "name": "aes",
-      "description": "Encontrado em: main.go:5",
+      "bom-ref": "urn:uuid:c0097fe8-6385-488a-be6a-39987a9ccda6",
+      "name": "from cryptography",
+      "description": "Encontrado em: secure_transfer.py:3",
       "cryptoProperties": {
-        "assetType": "algorithm",
-        "quantumSecurityStatus": "MEDIUM",
-        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
+        "assetType": "library",
+        "quantumSecurityStatus": "REVIEW",
+        "riskJustification": "Lib"
       }
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:f6f5f024-0b7d-4991-a5ac-4e3e2ed713a7",
-      "name": "aes",
-      "description": "Encontrado em: main.go:23",
+      "bom-ref": "urn:uuid:baf57291-8a78-40d1-9c43-e85bdb7a0ff3",
+      "name": "from cryptography",
+      "description": "Encontrado em: secure_transfer.py:4",
       "cryptoProperties": {
-        "assetType": "algorithm",
-        "quantumSecurityStatus": "MEDIUM",
-        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
+        "assetType": "library",
+        "quantumSecurityStatus": "REVIEW",
+        "riskJustification": "Lib"
       }
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:6a8e2770-f196-4375-84e3-c5a5a30904d0",
-      "name": "aes",
-      "description": "Encontrado em: main.go:40",
+      "bom-ref": "urn:uuid:100126cb-8b0d-4a3f-92e8-80bebc34b201",
+      "name": "from cryptography",
+      "description": "Encontrado em: report_export.py:3",
       "cryptoProperties": {
-        "assetType": "algorithm",
-        "quantumSecurityStatus": "MEDIUM",
-        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
+        "assetType": "library",
+        "quantumSecurityStatus": "REVIEW",
+        "riskJustification": "Lib"
       }
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:c89e5f5c-4ac5-40f4-ba6e-658e19936365",
+      "bom-ref": "urn:uuid:ff6b18a0-5ad8-45a8-8c36-2c25ffa22ec8",
+      "name": "AES",
+      "description": "Encontrado em: report_export.py:11",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "quantumSecurityStatus": "MEDIUM",
+        "riskJustification": "Enfraquecido pelo Algoritmo de Grover"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:cf8284d0-86ae-4f55-9f5a-34586287df31",
+      "name": "sha256",
+      "description": "Encontrado em: artifact_manifest.py:14",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "quantumSecurityStatus": "SAFE",
+        "riskJustification": "Resistente \u00e0 Computa\u00e7\u00e3o Qu\u00e2ntica",
+        "algorithmProperties": {
+          "parameterSetIdentifier": "256"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:7265171d-eaee-40d9-b4ea-82765588fde2",
+      "name": "from cryptography",
+      "description": "Encontrado em: webhook_signature.py:1",
+      "cryptoProperties": {
+        "assetType": "library",
+        "quantumSecurityStatus": "REVIEW",
+        "riskJustification": "Lib"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:5646cfea-6b94-442d-acc7-d89a29fa62a9",
+      "name": "from cryptography",
+      "description": "Encontrado em: license_token.py:1",
+      "cryptoProperties": {
+        "assetType": "library",
+        "quantumSecurityStatus": "REVIEW",
+        "riskJustification": "Lib"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:6e014f80-8bcc-43c1-a4fe-b2d8268eb464",
       "name": "rsa",
-      "description": "Encontrado em: main.go:6",
+      "description": "Encontrado em: license_token.py:2",
       "cryptoProperties": {
         "assetType": "algorithm",
         "quantumSecurityStatus": "CRITICAL",
-        "riskJustification": "Vulner\u00e1vel ao Algoritmo de Shor (Criptografia Assim\u00e9trica Cl\u00e1ssica)"
+        "riskJustification": "Vulner\u00e1vel ao Algoritmo de Shor"
       }
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:a00d2c8d-ae1f-4bac-925b-424aa2ca5a24",
-      "name": "sha1",
-      "description": "Encontrado em: main.go:7",
+      "bom-ref": "urn:uuid:0b87a95e-2ab0-4e02-baec-412b9ffa168f",
+      "name": "from cryptography",
+      "description": "Encontrado em: license_token.py:2",
       "cryptoProperties": {
-        "assetType": "algorithm",
-        "quantumSecurityStatus": "MEDIUM",
-        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
+        "assetType": "library",
+        "quantumSecurityStatus": "REVIEW",
+        "riskJustification": "Lib"
       }
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:6440dc76-5f4a-4273-9f1d-7a8cb5186d44",
+      "bom-ref": "urn:uuid:0059dbee-f091-4a1a-978b-038d97db135e",
       "name": "rsa",
-      "description": "Encontrado em: main.go:12",
+      "description": "Encontrado em: license_token.py:6",
       "cryptoProperties": {
         "assetType": "algorithm",
         "quantumSecurityStatus": "CRITICAL",
-        "riskJustification": "Vulner\u00e1vel ao Algoritmo de Shor (Criptografia Assim\u00e9trica Cl\u00e1ssica)"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:a1f1ad91-6748-4ac5-a468-9e5e1c2175b8",
-      "name": "rsa",
-      "description": "Encontrado em: main.go:13",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "quantumSecurityStatus": "CRITICAL",
-        "riskJustification": "Vulner\u00e1vel ao Algoritmo de Shor (Criptografia Assim\u00e9trica Cl\u00e1ssica)",
+        "riskJustification": "Vulner\u00e1vel ao Algoritmo de Shor",
         "algorithmProperties": {
           "parameterSetIdentifier": "1024"
         }
@@ -920,90 +914,96 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:ad741529-973b-4c86-9e18-fff9e35ad85e",
-      "name": "rsa",
-      "description": "Encontrado em: main.go:16",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "quantumSecurityStatus": "CRITICAL",
-        "riskJustification": "Vulner\u00e1vel ao Algoritmo de Shor (Criptografia Assim\u00e9trica Cl\u00e1ssica)"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:a9853549-85a8-4c09-bd16-0cb8fcac7628",
-      "name": "sha1",
-      "description": "Encontrado em: main.go:17",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "quantumSecurityStatus": "MEDIUM",
-        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:f833c743-af4c-4fae-8411-91164395319d",
+      "bom-ref": "urn:uuid:88a2169b-8b90-4d1c-aef6-4aa505ae1cf3",
       "name": "SHA1",
-      "description": "Encontrado em: main.go:18",
+      "description": "Encontrado em: license_token.py:11",
       "cryptoProperties": {
         "assetType": "algorithm",
         "quantumSecurityStatus": "MEDIUM",
-        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
+        "riskJustification": "Enfraquecido pelo Algoritmo de Grover"
       }
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:0b1b5465-601b-44ae-87c0-5dbde2053d1f",
-      "name": "rsa",
-      "description": "Encontrado em: main.go:18",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "quantumSecurityStatus": "CRITICAL",
-        "riskJustification": "Vulner\u00e1vel ao Algoritmo de Shor (Criptografia Assim\u00e9trica Cl\u00e1ssica)"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:417a560c-4da5-4f9b-9d56-77fad1a1ca7b",
-      "name": "rsa",
-      "description": "Encontrado em: main.go:21",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "quantumSecurityStatus": "CRITICAL",
-        "riskJustification": "Vulner\u00e1vel ao Algoritmo de Shor (Criptografia Assim\u00e9trica Cl\u00e1ssica)"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:fc2499cf-2e0b-4585-8110-37542de40cd0",
-      "name": "sha1",
-      "description": "Encontrado em: main.go:22",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "quantumSecurityStatus": "MEDIUM",
-        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:7b273cd7-f8c1-43fb-bb51-621920c47de1",
+      "bom-ref": "urn:uuid:fdcf2c42-bdcb-40cd-b515-6e698007b4bd",
       "name": "SHA1",
-      "description": "Encontrado em: main.go:23",
+      "description": "Encontrado em: license_token.py:16",
       "cryptoProperties": {
         "assetType": "algorithm",
         "quantumSecurityStatus": "MEDIUM",
-        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
+        "riskJustification": "Enfraquecido pelo Algoritmo de Grover"
       }
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:b344083c-e48b-4d53-9d60-e0105b5c4b66",
-      "name": "rsa",
-      "description": "Encontrado em: main.go:23",
+      "bom-ref": "urn:uuid:09d47420-f955-4ee0-9f51-959a88996b0c",
+      "name": "sha1",
+      "description": "Encontrado em: update_feed.py:5",
       "cryptoProperties": {
         "assetType": "algorithm",
-        "quantumSecurityStatus": "CRITICAL",
-        "riskJustification": "Vulner\u00e1vel ao Algoritmo de Shor (Criptografia Assim\u00e9trica Cl\u00e1ssica)"
+        "quantumSecurityStatus": "MEDIUM",
+        "riskJustification": "Enfraquecido pelo Algoritmo de Grover"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:f162d441-0904-45d9-9535-6b5408054bd8",
+      "name": "md5",
+      "description": "Encontrado em: legacy_accounts.py:5",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "quantumSecurityStatus": "MEDIUM",
+        "riskJustification": "Enfraquecido pelo Algoritmo de Grover"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:911f0f44-49ff-4ef8-9e18-9c82c2ec8c0b",
+      "name": "from cryptography",
+      "description": "Encontrado em: member_credentials.py:3",
+      "cryptoProperties": {
+        "assetType": "library",
+        "quantumSecurityStatus": "REVIEW",
+        "riskJustification": "Lib"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:3dda0cda-2fff-4109-b7b9-1b352ae47324",
+      "name": "from cryptography",
+      "description": "Encontrado em: member_credentials.py:4",
+      "cryptoProperties": {
+        "assetType": "library",
+        "quantumSecurityStatus": "REVIEW",
+        "riskJustification": "Lib"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:d4b24ebe-0cac-42bc-8e47-5c0fd7f36927",
+      "name": "SHA256",
+      "description": "Encontrado em: member_credentials.py:13",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "quantumSecurityStatus": "SAFE",
+        "riskJustification": "Resistente \u00e0 Computa\u00e7\u00e3o Qu\u00e2ntica",
+        "algorithmProperties": {
+          "parameterSetIdentifier": "256"
+        }
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:be76c35a-a812-46ce-ba55-89ac3d95d116",
+      "name": "SHA256",
+      "description": "Encontrado em: member_credentials.py:18",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "quantumSecurityStatus": "SAFE",
+        "riskJustification": "Resistente \u00e0 Computa\u00e7\u00e3o Qu\u00e2ntica",
+        "algorithmProperties": {
+          "parameterSetIdentifier": "256"
+        }
       }
     }
   ]
