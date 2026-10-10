@@ -6,6 +6,23 @@
     {
       "type": "cryptographic-asset",
       "bom-ref": "crypto-asset-0",
+      "name": "from cryptography",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "from cryptography",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "webhook_signature.py:1"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-1",
       "name": "sha1",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -22,7 +39,24 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-1",
+      "bom-ref": "crypto-asset-2",
+      "name": "from cryptography",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "from cryptography",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "report_export.py:3"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-3",
       "name": "AES",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -39,7 +73,41 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-2",
+      "bom-ref": "crypto-asset-4",
+      "name": "from cryptography",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "from cryptography",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "member_credentials.py:3"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-5",
+      "name": "from cryptography",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "from cryptography",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "member_credentials.py:4"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-6",
       "name": "SHA256",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -56,7 +124,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-3",
+      "bom-ref": "crypto-asset-7",
       "name": "SHA256",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -73,7 +141,41 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-4",
+      "bom-ref": "crypto-asset-8",
+      "name": "from cryptography",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "from cryptography",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "secure_transfer.py:3"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-9",
+      "name": "from cryptography",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "from cryptography",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "secure_transfer.py:4"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-10",
       "name": "sha256",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -90,7 +192,24 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-5",
+      "bom-ref": "crypto-asset-11",
+      "name": "from cryptography",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "from cryptography",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "license_token.py:1"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-12",
       "name": "rsa",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -107,7 +226,24 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-6",
+      "bom-ref": "crypto-asset-13",
+      "name": "from cryptography",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "from cryptography",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "license_token.py:2"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-14",
       "name": "rsa",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -124,7 +260,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-7",
+      "bom-ref": "crypto-asset-15",
       "name": "SHA1",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -141,7 +277,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-8",
+      "bom-ref": "crypto-asset-16",
       "name": "SHA1",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -158,7 +294,92 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-9",
+      "bom-ref": "crypto-asset-17",
+      "name": "import java.security",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "import java.security",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "ConfigSync.java:1"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-18",
+      "name": "import javax.crypto",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "import javax.crypto",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "ConfigSync.java:4"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-19",
+      "name": "import javax.crypto",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "import javax.crypto",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "ConfigSync.java:5"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-20",
+      "name": "import java.security",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "import java.security",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "PatchFeed.java:1"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-21",
+      "name": "sha1",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "sha1",
+          "cryptoFunctions": [
+            "MEDIUM"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "PatchFeed.java:8"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-22",
       "name": "SHA-1",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -175,24 +396,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-10",
-      "name": "sha1",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "algorithmProperties": {
-          "primitive": "sha1",
-          "cryptoFunctions": [
-            "MEDIUM"
-          ]
-        }
-      },
-      "evidence": {
-        "location": "PatchFeed.java:8"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-11",
+      "bom-ref": "crypto-asset-23",
       "name": "sha1",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -209,7 +413,211 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-12",
+      "bom-ref": "crypto-asset-24",
+      "name": "import java.security",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "import java.security",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "CustomerDirectory.java:1"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-25",
+      "name": "import java.security",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "import java.security",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "DeviceAttestation.java:1"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-26",
+      "name": "import java.security",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "import java.security",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "DeviceAttestation.java:2"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-27",
+      "name": "import java.security",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "import java.security",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "DeviceAttestation.java:3"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-28",
+      "name": "import java.security",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "import java.security",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "DeviceAttestation.java:4"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-29",
+      "name": "import java.security",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "import java.security",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "DeviceAttestation.java:5"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-30",
+      "name": "import java.security",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "import java.security",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "IdentityVault.java:1"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-31",
+      "name": "import java.security",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "import java.security",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "IdentityVault.java:2"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-32",
+      "name": "import javax.crypto",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "import javax.crypto",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "IdentityVault.java:5"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-33",
+      "name": "import javax.crypto",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "import javax.crypto",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "IdentityVault.java:6"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-34",
+      "name": "import javax.crypto",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "import javax.crypto",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "BatchExporter.java:2"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-35",
+      "name": "import javax.crypto",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "import javax.crypto",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "BatchExporter.java:3"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-36",
       "name": "AES",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -226,7 +634,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-13",
+      "bom-ref": "crypto-asset-37",
       "name": "AES",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -243,7 +651,92 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-14",
+      "bom-ref": "crypto-asset-38",
+      "name": "import java.security",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "import java.security",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "ReceiptSigner.java:1"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-39",
+      "name": "import java.security",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "import java.security",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "ReceiptSigner.java:2"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-40",
+      "name": "import java.security",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "import java.security",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "ReceiptSigner.java:3"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-41",
+      "name": "import java.security",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "import java.security",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "ReceiptSigner.java:4"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-42",
+      "name": "import java.security",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "import java.security",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "ReceiptSigner.java:5"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-43",
       "name": "RSA",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -260,7 +753,92 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-15",
+      "bom-ref": "crypto-asset-44",
+      "name": "import java.security",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "import java.security",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "SessionCipher.java:1"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-45",
+      "name": "import javax.crypto",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "import javax.crypto",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "SessionCipher.java:2"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-46",
+      "name": "import javax.crypto",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "import javax.crypto",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "SessionCipher.java:3"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-47",
+      "name": "import javax.crypto",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "import javax.crypto",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "SessionCipher.java:4"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-48",
+      "name": "import javax.crypto",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "import javax.crypto",
+          "cryptoFunctions": [
+            "REVIEW"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "SessionCipher.java:5"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-49",
       "name": "AES",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -277,7 +855,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-16",
+      "bom-ref": "crypto-asset-50",
       "name": "AES",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -294,7 +872,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-17",
+      "bom-ref": "crypto-asset-51",
       "name": "sha256",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -311,7 +889,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-18",
+      "bom-ref": "crypto-asset-52",
       "name": "sha512",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -328,7 +906,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-19",
+      "bom-ref": "crypto-asset-53",
       "name": "sha512",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -345,7 +923,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-20",
+      "bom-ref": "crypto-asset-54",
       "name": "sha256",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -362,7 +940,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-21",
+      "bom-ref": "crypto-asset-55",
       "name": "sha256",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -379,7 +957,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-22",
+      "bom-ref": "crypto-asset-56",
       "name": "sha256",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -396,7 +974,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-23",
+      "bom-ref": "crypto-asset-57",
       "name": "sha256",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -413,7 +991,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-24",
+      "bom-ref": "crypto-asset-58",
       "name": "sha256",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -430,7 +1008,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-25",
+      "bom-ref": "crypto-asset-59",
       "name": "aes",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -447,7 +1025,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-26",
+      "bom-ref": "crypto-asset-60",
       "name": "aes",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -464,7 +1042,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-27",
+      "bom-ref": "crypto-asset-61",
       "name": "aes",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -481,7 +1059,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-28",
+      "bom-ref": "crypto-asset-62",
       "name": "aes",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -498,7 +1076,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-29",
+      "bom-ref": "crypto-asset-63",
       "name": "aes",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -515,7 +1093,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-30",
+      "bom-ref": "crypto-asset-64",
       "name": "sha1",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -532,7 +1110,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-31",
+      "bom-ref": "crypto-asset-65",
       "name": "sha1",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -549,7 +1127,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-32",
+      "bom-ref": "crypto-asset-66",
       "name": "aes",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -566,7 +1144,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-33",
+      "bom-ref": "crypto-asset-67",
       "name": "aes",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -583,7 +1161,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-34",
+      "bom-ref": "crypto-asset-68",
       "name": "aes",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -600,7 +1178,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-35",
+      "bom-ref": "crypto-asset-69",
       "name": "rsa",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -617,7 +1195,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-36",
+      "bom-ref": "crypto-asset-70",
       "name": "sha1",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -634,7 +1212,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-37",
+      "bom-ref": "crypto-asset-71",
       "name": "rsa",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -651,7 +1229,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-38",
+      "bom-ref": "crypto-asset-72",
       "name": "rsa",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -668,7 +1246,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-39",
+      "bom-ref": "crypto-asset-73",
       "name": "rsa",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -685,7 +1263,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-40",
+      "bom-ref": "crypto-asset-74",
       "name": "sha1",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -702,24 +1280,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-41",
-      "name": "SHA1",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "algorithmProperties": {
-          "primitive": "SHA1",
-          "cryptoFunctions": [
-            "MEDIUM"
-          ]
-        }
-      },
-      "evidence": {
-        "location": "main.go:18"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-42",
+      "bom-ref": "crypto-asset-75",
       "name": "rsa",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -736,7 +1297,24 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-43",
+      "bom-ref": "crypto-asset-76",
+      "name": "SHA1",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "SHA1",
+          "cryptoFunctions": [
+            "MEDIUM"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "main.go:18"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-77",
       "name": "rsa",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -753,7 +1331,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-44",
+      "bom-ref": "crypto-asset-78",
       "name": "sha1",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -770,14 +1348,14 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-45",
-      "name": "SHA1",
+      "bom-ref": "crypto-asset-79",
+      "name": "rsa",
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "SHA1",
+          "primitive": "rsa",
           "cryptoFunctions": [
-            "MEDIUM"
+            "CRITICAL"
           ]
         }
       },
@@ -787,14 +1365,14 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-46",
-      "name": "rsa",
+      "bom-ref": "crypto-asset-80",
+      "name": "SHA1",
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "rsa",
+          "primitive": "SHA1",
           "cryptoFunctions": [
-            "CRITICAL"
+            "MEDIUM"
           ]
         }
       },

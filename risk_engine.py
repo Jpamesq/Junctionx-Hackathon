@@ -1,14 +1,14 @@
 RISK_LEVELS = {
     "CRITICAL": {
-        "description": "Vulnerável ao Algoritmo de Shor (Criptografia Assimétrica Clássica)",
+        "description": "Vulnerável a Shor(Assimetrica)",
         "patterns": ["RSA", "ECDSA", "ECDH", "DSA", "DH", "DIFFIE-HELLMAN", "SECP256R1", "SECP384R1"]
     },
     "MEDIUM": {
-        "description": "Enfraquecido pelo Algoritmo de Grover (Cifras Simétricas curtas e Hashes legados)",
+        "description": "Enfraquecido por Grover(Simétricas)",
         "patterns": ["AES-128", "3DES", "DES", "SHA-1", "SHA1", "MD5", "RC4"]
     },
     "SAFE": {
-        "description": "Resistente à Computação Quântica (PQC ou Cifras Simétricas Longas)",
+        "description": "Resistente",
         "patterns": ["AES-256", "SHA-3", "SHA-512", "ML-KEM", "KYBER", "ML-DSA", "DILITHIUM", "SLH-DSA", "SPHINCS+"]
     }
 }
