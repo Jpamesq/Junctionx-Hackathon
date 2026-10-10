@@ -1,7 +1,7 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-  "serialNumber": "urn:uuid:b4796aca-7019-47e2-bc92-ecd4810abb48",
+  "serialNumber": "urn:uuid:f71c0d84-fe86-41e3-87c7-a4469102e5c8",
   "version": 1,
   "metadata": {
     "component": {
@@ -12,7 +12,7 @@
   "components": [
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:1d19bc89-e2f1-4051-a506-e3aa0fc6a97e",
+      "bom-ref": "urn:uuid:3c988ec3-2d94-4cb4-9121-1d04e43c3ce4",
       "name": "from cryptography",
       "description": "Encontrado em: webhook_signature.py:1",
       "cryptoProperties": {
@@ -23,7 +23,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:cc685675-9a8d-448d-aa67-8c5f8d7b44bd",
+      "bom-ref": "urn:uuid:80c87fee-77d8-4862-95e2-0036b492147d",
       "name": "sha1",
       "description": "Encontrado em: update_feed.py:5",
       "cryptoProperties": {
@@ -34,7 +34,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:78fd0076-8394-44c8-8f43-8e1e976355ed",
+      "bom-ref": "urn:uuid:f0b9781b-967a-4a72-9b70-96f3d1985b27",
       "name": "from cryptography",
       "description": "Encontrado em: report_export.py:3",
       "cryptoProperties": {
@@ -45,7 +45,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:5b4edf18-ceee-47ff-97a7-2613ec95599b",
+      "bom-ref": "urn:uuid:7e531b37-4f8a-40be-82a1-0713c310da9a",
       "name": "AES",
       "description": "Encontrado em: report_export.py:11",
       "cryptoProperties": {
@@ -56,7 +56,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:07eba9b4-f560-40ae-bab2-9ed6a670c694",
+      "bom-ref": "urn:uuid:f21cf6c4-09b5-48d7-bc96-fec97589dbba",
       "name": "from cryptography",
       "description": "Encontrado em: member_credentials.py:3",
       "cryptoProperties": {
@@ -67,7 +67,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:9d7be5ec-b75e-4275-bf8b-248c1d116c1e",
+      "bom-ref": "urn:uuid:bfa93a0a-f4b4-4556-ba31-3f8c27d8198f",
       "name": "from cryptography",
       "description": "Encontrado em: member_credentials.py:4",
       "cryptoProperties": {
@@ -78,7 +78,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:178865aa-8002-4b94-8f41-4c4e7034ffe0",
+      "bom-ref": "urn:uuid:0c11da9f-3e06-4d9e-8aca-ef997252080e",
       "name": "SHA256",
       "description": "Encontrado em: member_credentials.py:13",
       "cryptoProperties": {
@@ -92,7 +92,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:b119f187-74df-421b-b54d-d19b47aba5c0",
+      "bom-ref": "urn:uuid:6e04cd69-63c6-41cd-86b9-42edd419a5ba",
       "name": "SHA256",
       "description": "Encontrado em: member_credentials.py:18",
       "cryptoProperties": {
@@ -106,7 +106,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:1b468975-3e37-427f-a5b4-d0c7db0e24eb",
+      "bom-ref": "urn:uuid:cbfdf712-d68c-48a5-900f-4e2725484fac",
       "name": "md5",
       "description": "Encontrado em: legacy_accounts.py:5",
       "cryptoProperties": {
@@ -117,7 +117,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:e50acba0-a671-4f7e-8b20-05b8b5becd3d",
+      "bom-ref": "urn:uuid:8a2b224f-e95e-418b-a91c-45ac896301ef",
       "name": "from cryptography",
       "description": "Encontrado em: secure_transfer.py:3",
       "cryptoProperties": {
@@ -128,7 +128,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:68b4b052-cd2b-4e4f-b4b2-2cc83f7c3736",
+      "bom-ref": "urn:uuid:7c731550-a2d5-42f4-9e11-89a59dc1f898",
       "name": "from cryptography",
       "description": "Encontrado em: secure_transfer.py:4",
       "cryptoProperties": {
@@ -139,7 +139,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:63d893ac-7970-44c3-990e-3bbf6d1df215",
+      "bom-ref": "urn:uuid:ac54f941-0693-4d77-80f8-e733559d6b7f",
       "name": "sha256",
       "description": "Encontrado em: artifact_manifest.py:14",
       "cryptoProperties": {
@@ -153,7 +153,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:94c69c7b-2cec-48d7-9f67-b4131db6de80",
+      "bom-ref": "urn:uuid:5a7a9cae-9b5a-44fa-91ee-630f1e8f372a",
       "name": "from cryptography",
       "description": "Encontrado em: license_token.py:1",
       "cryptoProperties": {
@@ -164,7 +164,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:7f2d63c7-25cf-4e8a-bc34-276c2d7b9290",
+      "bom-ref": "urn:uuid:94b273e7-8278-42d4-9f5f-603ace0cf02b",
       "name": "rsa",
       "description": "Encontrado em: license_token.py:2",
       "cryptoProperties": {
@@ -175,7 +175,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:913923e9-ac37-4ef7-bf04-a084def56c9e",
+      "bom-ref": "urn:uuid:3774bc93-0d4f-491e-882d-4b7fcddd8ffa",
       "name": "from cryptography",
       "description": "Encontrado em: license_token.py:2",
       "cryptoProperties": {
@@ -186,7 +186,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:6ac138bd-b3a9-467f-926d-f3849bfa5bed",
+      "bom-ref": "urn:uuid:d13e7c92-4ae5-4578-a9b7-47c75c4bf27a",
       "name": "rsa",
       "description": "Encontrado em: license_token.py:6",
       "cryptoProperties": {
@@ -200,7 +200,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:34a1dc0d-de2e-4f6b-ab1a-2231730b0978",
+      "bom-ref": "urn:uuid:2cf9cbe1-9a63-4933-8172-7e8e5d4a87f6",
       "name": "SHA1",
       "description": "Encontrado em: license_token.py:11",
       "cryptoProperties": {
@@ -211,7 +211,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:77394bf1-7856-43b1-b454-02ea0dd1a70b",
+      "bom-ref": "urn:uuid:a6c84a48-30e5-44cb-aba3-2db90e675e4d",
       "name": "SHA1",
       "description": "Encontrado em: license_token.py:16",
       "cryptoProperties": {
@@ -222,7 +222,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:db39720c-d167-463f-9798-d0b66b19945c",
+      "bom-ref": "urn:uuid:a2a6b822-e703-480e-b7a9-9a0c8f8bc672",
       "name": "import java.security",
       "description": "Encontrado em: ConfigSync.java:1",
       "cryptoProperties": {
@@ -233,7 +233,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:71659de3-1a97-4a07-a1e2-dc0af8a8bcb4",
+      "bom-ref": "urn:uuid:32e162ce-ac0f-4eb8-8e9c-cfa24d12c299",
       "name": "import javax.crypto",
       "description": "Encontrado em: ConfigSync.java:4",
       "cryptoProperties": {
@@ -244,7 +244,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:a23b95db-7e75-471c-a9cb-31ef7ce24a75",
+      "bom-ref": "urn:uuid:958d93b7-6c9b-49ae-a6c3-c765481b921e",
       "name": "import javax.crypto",
       "description": "Encontrado em: ConfigSync.java:5",
       "cryptoProperties": {
@@ -255,7 +255,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:a136bdee-ebb1-4282-b03f-e3e1c140dd2c",
+      "bom-ref": "urn:uuid:d8f2632e-87c2-4c5d-84b0-48f4d4b937ec",
       "name": "import java.security",
       "description": "Encontrado em: PatchFeed.java:1",
       "cryptoProperties": {
@@ -266,7 +266,18 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:6d0a9398-6fb0-4dbb-993e-31b05834385f",
+      "bom-ref": "urn:uuid:f42ed9bf-7ad7-4372-b8e6-4d2fa5e96d8a",
+      "name": "sha1",
+      "description": "Encontrado em: PatchFeed.java:8",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "quantumSecurityStatus": "MEDIUM",
+        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:8a4f05a0-1683-4cba-b0bd-5ac92d4debf5",
       "name": "SHA-1",
       "description": "Encontrado em: PatchFeed.java:8",
       "cryptoProperties": {
@@ -277,18 +288,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:81d167bd-327c-40dc-b821-ee290e5b26c5",
-      "name": "sha1",
-      "description": "Encontrado em: PatchFeed.java:8",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "quantumSecurityStatus": "MEDIUM",
-        "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:e6861d00-23a3-4fa4-9c31-a357de1594d1",
+      "bom-ref": "urn:uuid:c95906f3-33fa-4629-ac99-308d2b28f028",
       "name": "sha1",
       "description": "Encontrado em: PatchFeed.java:9",
       "cryptoProperties": {
@@ -299,7 +299,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:2b579d7b-97b2-47d6-bb45-e0de155c13a8",
+      "bom-ref": "urn:uuid:2822ad68-b3e0-42a5-9bcd-b57bae2b1d34",
       "name": "import java.security",
       "description": "Encontrado em: CustomerDirectory.java:1",
       "cryptoProperties": {
@@ -310,7 +310,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:10b2bdb8-d77b-4ab3-95cc-bd0e253beb75",
+      "bom-ref": "urn:uuid:53e477f8-01eb-484d-8d89-de144be5df1b",
       "name": "md5",
       "description": "Encontrado em: CustomerDirectory.java:8",
       "cryptoProperties": {
@@ -321,7 +321,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:d9d4f16d-8aee-4532-ad65-fc05e5b4f5a5",
+      "bom-ref": "urn:uuid:82c28dd1-b7ff-4a3d-9395-2f6be13ac490",
       "name": "MD5",
       "description": "Encontrado em: CustomerDirectory.java:8",
       "cryptoProperties": {
@@ -332,7 +332,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:868cb438-bf5b-4775-b9c5-ba28ee3cb379",
+      "bom-ref": "urn:uuid:f744cfe9-9922-4d35-adc6-a03408a29c73",
       "name": "md5",
       "description": "Encontrado em: CustomerDirectory.java:9",
       "cryptoProperties": {
@@ -343,7 +343,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:7efc03d8-b923-4684-bf1b-b02579db29ad",
+      "bom-ref": "urn:uuid:b17d10b5-9a07-4780-893b-1e85a3d5e048",
       "name": "import java.security",
       "description": "Encontrado em: DeviceAttestation.java:1",
       "cryptoProperties": {
@@ -354,7 +354,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:78f8eb14-a946-4e3c-b3a8-a82b653cc748",
+      "bom-ref": "urn:uuid:fa3743c7-b705-4bea-b6a7-c8cd959bd7b7",
       "name": "import java.security",
       "description": "Encontrado em: DeviceAttestation.java:2",
       "cryptoProperties": {
@@ -365,7 +365,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:3968d0a5-a701-452c-bc9f-c7f8f1a14017",
+      "bom-ref": "urn:uuid:cc4b7614-b8af-41b9-a09f-3572fbfaa49e",
       "name": "import java.security",
       "description": "Encontrado em: DeviceAttestation.java:3",
       "cryptoProperties": {
@@ -376,7 +376,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:a6dffb68-85d0-4b6e-bbc0-7b900c2f4364",
+      "bom-ref": "urn:uuid:bee485be-1e21-498f-ade9-0f0014bef49c",
       "name": "import java.security",
       "description": "Encontrado em: DeviceAttestation.java:4",
       "cryptoProperties": {
@@ -387,7 +387,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:b3b6b124-1e89-44ab-bb9d-05c92e4838c0",
+      "bom-ref": "urn:uuid:b675d35c-934c-4c5a-b232-f30a59aa07d7",
       "name": "import java.security",
       "description": "Encontrado em: DeviceAttestation.java:5",
       "cryptoProperties": {
@@ -398,7 +398,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:30bdf846-fcfe-409d-b8c0-f611a08dbe32",
+      "bom-ref": "urn:uuid:f7d5c82a-e6be-4715-9edf-db278eb6939d",
       "name": "import java.security",
       "description": "Encontrado em: IdentityVault.java:1",
       "cryptoProperties": {
@@ -409,7 +409,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:ff093450-dbb7-4034-96e2-4be3db4eb48c",
+      "bom-ref": "urn:uuid:31837f56-6e19-4942-875e-e7241019168e",
       "name": "import java.security",
       "description": "Encontrado em: IdentityVault.java:2",
       "cryptoProperties": {
@@ -420,7 +420,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:dd58ba08-515e-4d73-b94a-ab339dfc2d70",
+      "bom-ref": "urn:uuid:3423b69c-0301-4421-aa62-bf014a1457be",
       "name": "import javax.crypto",
       "description": "Encontrado em: IdentityVault.java:5",
       "cryptoProperties": {
@@ -431,7 +431,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:01299b2a-dbd5-45d1-8f5b-808d46a53a7f",
+      "bom-ref": "urn:uuid:75d7a1d0-2270-4ff0-9a48-69585598d65c",
       "name": "import javax.crypto",
       "description": "Encontrado em: IdentityVault.java:6",
       "cryptoProperties": {
@@ -442,7 +442,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:928d6a58-49dd-4e2d-9a91-9d18c59fb229",
+      "bom-ref": "urn:uuid:b98660e2-7bcd-4ca0-a0b6-922029d577e9",
       "name": "import javax.crypto",
       "description": "Encontrado em: BatchExporter.java:2",
       "cryptoProperties": {
@@ -453,7 +453,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:6e7ef12d-596e-4dc6-aa18-06319f1fdeb9",
+      "bom-ref": "urn:uuid:069dadee-8a33-4f6e-8e60-80e898a826e0",
       "name": "import javax.crypto",
       "description": "Encontrado em: BatchExporter.java:3",
       "cryptoProperties": {
@@ -464,7 +464,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:9fa3ba37-5120-4c95-9f30-4ccbb45a419b",
+      "bom-ref": "urn:uuid:9ceeb18d-fda6-43be-a475-44ddbac2880c",
       "name": "AES",
       "description": "Encontrado em: BatchExporter.java:10",
       "cryptoProperties": {
@@ -475,7 +475,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:89162f04-98a6-4ae0-9163-58f3bb8cd616",
+      "bom-ref": "urn:uuid:f50615a8-0bd0-405b-ae07-e0cc06829c6c",
       "name": "AES",
       "description": "Encontrado em: BatchExporter.java:13",
       "cryptoProperties": {
@@ -486,7 +486,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:e234b457-9db1-4e06-b643-11fc65264b9c",
+      "bom-ref": "urn:uuid:55a633a2-ce5d-4eaf-bab4-3966654dc942",
       "name": "import java.security",
       "description": "Encontrado em: ReceiptSigner.java:1",
       "cryptoProperties": {
@@ -497,7 +497,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:ca2ac252-448a-4a45-bc8b-9f9320d309ab",
+      "bom-ref": "urn:uuid:32741a0f-d336-43cf-bfe8-92d9a628fe07",
       "name": "import java.security",
       "description": "Encontrado em: ReceiptSigner.java:2",
       "cryptoProperties": {
@@ -508,7 +508,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:beb7e227-1a23-484a-802e-02df1b4e3f50",
+      "bom-ref": "urn:uuid:e5e41d27-8bb1-41cc-977a-856744b3f287",
       "name": "import java.security",
       "description": "Encontrado em: ReceiptSigner.java:3",
       "cryptoProperties": {
@@ -519,7 +519,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:70ebd059-0b4c-49b5-b5a8-a62faabfe16b",
+      "bom-ref": "urn:uuid:90c0f63a-37b6-4667-9ef2-0741b42378ff",
       "name": "import java.security",
       "description": "Encontrado em: ReceiptSigner.java:4",
       "cryptoProperties": {
@@ -530,7 +530,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:cc84514a-9ec1-45c3-a9b5-4fd08ffba2b9",
+      "bom-ref": "urn:uuid:051a1eb8-eb47-4e99-aac8-2478834be4fb",
       "name": "import java.security",
       "description": "Encontrado em: ReceiptSigner.java:5",
       "cryptoProperties": {
@@ -541,7 +541,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:e5a8f47d-59cd-4858-9c15-3ebb9b2a9542",
+      "bom-ref": "urn:uuid:4bd14d9f-c397-476b-97fc-a8c4c3d4ec59",
       "name": "RSA",
       "description": "Encontrado em: ReceiptSigner.java:12",
       "cryptoProperties": {
@@ -552,7 +552,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:f5decac5-23fc-468b-bc6c-454991750ee9",
+      "bom-ref": "urn:uuid:a2a193a2-12e2-4541-8618-634b5d426e45",
       "name": "import java.security",
       "description": "Encontrado em: SessionCipher.java:1",
       "cryptoProperties": {
@@ -563,7 +563,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:e25a0296-661a-47b8-bcb0-e60d0ee43cc4",
+      "bom-ref": "urn:uuid:7fca2f46-a300-4668-8211-82f363b45a8f",
       "name": "import javax.crypto",
       "description": "Encontrado em: SessionCipher.java:2",
       "cryptoProperties": {
@@ -574,7 +574,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:0a251188-5e0d-4e97-a734-0265e204b164",
+      "bom-ref": "urn:uuid:392a0250-7b89-490f-adab-c2fc240adff8",
       "name": "import javax.crypto",
       "description": "Encontrado em: SessionCipher.java:3",
       "cryptoProperties": {
@@ -585,7 +585,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:b1a17183-3004-4398-a88c-540e88d723fd",
+      "bom-ref": "urn:uuid:4cc8ccf4-eb07-4d6f-a453-466c11f591a9",
       "name": "import javax.crypto",
       "description": "Encontrado em: SessionCipher.java:4",
       "cryptoProperties": {
@@ -596,7 +596,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:3e60045d-53b1-4390-a853-28158f2a803e",
+      "bom-ref": "urn:uuid:22ec2685-6f90-4b1d-a5dd-09dcc42995d1",
       "name": "import javax.crypto",
       "description": "Encontrado em: SessionCipher.java:5",
       "cryptoProperties": {
@@ -607,7 +607,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:b25eedfa-a98e-4f1c-95bc-4e8111db7df3",
+      "bom-ref": "urn:uuid:832e431a-220a-4f95-804d-98329b742a5d",
       "name": "AES",
       "description": "Encontrado em: SessionCipher.java:12",
       "cryptoProperties": {
@@ -618,7 +618,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:6b0a6ec2-f015-4fa0-a145-8d8cd2cc053d",
+      "bom-ref": "urn:uuid:df65ac10-5c97-4841-9b44-cdaad608ff44",
       "name": "AES",
       "description": "Encontrado em: SessionCipher.java:18",
       "cryptoProperties": {
@@ -629,7 +629,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:c827e7bd-e405-474b-a442-e0db98d9324f",
+      "bom-ref": "urn:uuid:7bcd75d7-ea1b-4812-966e-7abc5cee330e",
       "name": "sha256",
       "description": "Encontrado em: main.go:5",
       "cryptoProperties": {
@@ -643,7 +643,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:caf828ae-5b92-4873-831f-eee4d30e3d0b",
+      "bom-ref": "urn:uuid:6098cf23-3042-4656-b0f5-96b8aa21d595",
       "name": "sha512",
       "description": "Encontrado em: main.go:6",
       "cryptoProperties": {
@@ -657,7 +657,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:1a7439f6-093e-4f47-857f-1ea9ec493f09",
+      "bom-ref": "urn:uuid:ba1f3bac-2c08-48c1-ae6b-1438ae7877c8",
       "name": "sha512",
       "description": "Encontrado em: main.go:13",
       "cryptoProperties": {
@@ -671,7 +671,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:4c511f85-813f-4d8f-b10d-376c2c90df8c",
+      "bom-ref": "urn:uuid:4b5d39aa-5f43-444e-a979-5c49934ffc7d",
       "name": "sha256",
       "description": "Encontrado em: main.go:22",
       "cryptoProperties": {
@@ -685,7 +685,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:52449aa5-d900-45be-8fb3-fac5d03c29fe",
+      "bom-ref": "urn:uuid:f8d8c8ba-4314-4d04-8b7c-2f750a51f12f",
       "name": "sha256",
       "description": "Encontrado em: main.go:6",
       "cryptoProperties": {
@@ -699,7 +699,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:238c7832-3936-4667-8709-53e3e2cdaa68",
+      "bom-ref": "urn:uuid:e9df876b-dbb6-45bf-8d13-bcd6447904e9",
       "name": "sha256",
       "description": "Encontrado em: main.go:20",
       "cryptoProperties": {
@@ -713,7 +713,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:ecbdcc47-3d80-415f-80a2-4ddfa6528ff6",
+      "bom-ref": "urn:uuid:60edfb52-c3fe-484c-9fda-7f83457019e5",
       "name": "sha256",
       "description": "Encontrado em: main.go:25",
       "cryptoProperties": {
@@ -727,7 +727,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:027a5139-fb2a-421e-afc3-7097f49382ad",
+      "bom-ref": "urn:uuid:7a45a793-6237-42d4-8e32-e5b3bf03f48b",
       "name": "sha256",
       "description": "Encontrado em: main.go:34",
       "cryptoProperties": {
@@ -741,7 +741,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:33abdc61-8369-4813-95b9-1d7ac3494bb8",
+      "bom-ref": "urn:uuid:05fe3f94-0c6f-4356-be9a-987b15bcc527",
       "name": "aes",
       "description": "Encontrado em: main.go:4",
       "cryptoProperties": {
@@ -752,7 +752,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:a327c192-b66c-484f-a299-12d937cf2d15",
+      "bom-ref": "urn:uuid:81297a87-d2f2-40b4-83ac-5bbf54ebeb36",
       "name": "aes",
       "description": "Encontrado em: main.go:22",
       "cryptoProperties": {
@@ -763,7 +763,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:21d61104-82f3-452e-be1b-a9251e1ec110",
+      "bom-ref": "urn:uuid:bb516d3a-619d-46e0-8780-ef7f1511e64d",
       "name": "aes",
       "description": "Encontrado em: main.go:26",
       "cryptoProperties": {
@@ -774,7 +774,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:99d4d769-d434-43f9-901f-3aa2b8573017",
+      "bom-ref": "urn:uuid:26964500-a5ed-4935-8b6f-4ce752d2f1f8",
       "name": "aes",
       "description": "Encontrado em: main.go:28",
       "cryptoProperties": {
@@ -785,7 +785,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:5c8c5355-64ed-4e82-9fe4-4fb54c4eff56",
+      "bom-ref": "urn:uuid:f558200b-3418-479a-959e-7d596e562c75",
       "name": "aes",
       "description": "Encontrado em: main.go:29",
       "cryptoProperties": {
@@ -796,7 +796,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:c0ea15dc-005d-4e64-9b79-9161eaf8fa44",
+      "bom-ref": "urn:uuid:9c388664-0cff-4f56-80ef-5cce0cab8e16",
       "name": "sha1",
       "description": "Encontrado em: main.go:4",
       "cryptoProperties": {
@@ -807,7 +807,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:9aa3285b-e759-497f-a478-40caa2b01c48",
+      "bom-ref": "urn:uuid:7c8a091c-86eb-448b-b217-0b6ee9630094",
       "name": "sha1",
       "description": "Encontrado em: main.go:10",
       "cryptoProperties": {
@@ -818,7 +818,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:935fd13e-18b0-4294-b6b6-2a264ab011ef",
+      "bom-ref": "urn:uuid:68501d12-de95-45c8-a191-c3b04de692e3",
       "name": "md5",
       "description": "Encontrado em: main.go:4",
       "cryptoProperties": {
@@ -829,7 +829,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:83d3ef2c-7b17-4ba8-b068-e3cc87484b64",
+      "bom-ref": "urn:uuid:2366c15e-b7ac-4a9f-8c1a-69a0a9a366f7",
       "name": "md5",
       "description": "Encontrado em: main.go:10",
       "cryptoProperties": {
@@ -840,7 +840,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:0d4e12f5-ee42-4d63-9003-2b67980288d6",
+      "bom-ref": "urn:uuid:927f64b4-6fd3-42f9-b005-a5b3a2c362d9",
       "name": "aes",
       "description": "Encontrado em: main.go:5",
       "cryptoProperties": {
@@ -851,7 +851,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:671fb081-5541-4bdd-99f0-a4a1b97e1d25",
+      "bom-ref": "urn:uuid:f6f5f024-0b7d-4991-a5ac-4e3e2ed713a7",
       "name": "aes",
       "description": "Encontrado em: main.go:23",
       "cryptoProperties": {
@@ -862,7 +862,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:9b868f82-ebac-4b1a-8e64-7fb99012f69f",
+      "bom-ref": "urn:uuid:6a8e2770-f196-4375-84e3-c5a5a30904d0",
       "name": "aes",
       "description": "Encontrado em: main.go:40",
       "cryptoProperties": {
@@ -873,7 +873,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:b07529a4-cb14-49cb-985b-9812fefd1e7f",
+      "bom-ref": "urn:uuid:c89e5f5c-4ac5-40f4-ba6e-658e19936365",
       "name": "rsa",
       "description": "Encontrado em: main.go:6",
       "cryptoProperties": {
@@ -884,7 +884,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:12f43d40-a28b-4788-86e6-2710ccafce49",
+      "bom-ref": "urn:uuid:a00d2c8d-ae1f-4bac-925b-424aa2ca5a24",
       "name": "sha1",
       "description": "Encontrado em: main.go:7",
       "cryptoProperties": {
@@ -895,7 +895,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:a2fdd290-7605-40d9-876e-5afe32bb1d4d",
+      "bom-ref": "urn:uuid:6440dc76-5f4a-4273-9f1d-7a8cb5186d44",
       "name": "rsa",
       "description": "Encontrado em: main.go:12",
       "cryptoProperties": {
@@ -906,7 +906,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:ccd58cd0-a702-4446-9302-86fd952499d7",
+      "bom-ref": "urn:uuid:a1f1ad91-6748-4ac5-a468-9e5e1c2175b8",
       "name": "rsa",
       "description": "Encontrado em: main.go:13",
       "cryptoProperties": {
@@ -920,7 +920,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:a6ffbe75-a2e5-4102-ba56-ce88b78d0cc6",
+      "bom-ref": "urn:uuid:ad741529-973b-4c86-9e18-fff9e35ad85e",
       "name": "rsa",
       "description": "Encontrado em: main.go:16",
       "cryptoProperties": {
@@ -931,7 +931,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:64f3b7a0-c588-4647-bb24-4410f1e4a716",
+      "bom-ref": "urn:uuid:a9853549-85a8-4c09-bd16-0cb8fcac7628",
       "name": "sha1",
       "description": "Encontrado em: main.go:17",
       "cryptoProperties": {
@@ -942,18 +942,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:e2d8e54a-644a-4bb7-927c-97341cab9028",
-      "name": "rsa",
-      "description": "Encontrado em: main.go:18",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "quantumSecurityStatus": "CRITICAL",
-        "riskJustification": "Vulner\u00e1vel ao Algoritmo de Shor (Criptografia Assim\u00e9trica Cl\u00e1ssica)"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:3fb71492-262b-46f0-84d9-98581a63909d",
+      "bom-ref": "urn:uuid:f833c743-af4c-4fae-8411-91164395319d",
       "name": "SHA1",
       "description": "Encontrado em: main.go:18",
       "cryptoProperties": {
@@ -964,7 +953,18 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:309a40cf-8a5c-4c44-b5de-2faee7e7ec0e",
+      "bom-ref": "urn:uuid:0b1b5465-601b-44ae-87c0-5dbde2053d1f",
+      "name": "rsa",
+      "description": "Encontrado em: main.go:18",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "quantumSecurityStatus": "CRITICAL",
+        "riskJustification": "Vulner\u00e1vel ao Algoritmo de Shor (Criptografia Assim\u00e9trica Cl\u00e1ssica)"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:417a560c-4da5-4f9b-9d56-77fad1a1ca7b",
       "name": "rsa",
       "description": "Encontrado em: main.go:21",
       "cryptoProperties": {
@@ -975,7 +975,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:950eb2b7-5b1d-4cfe-86f8-5d1140f9a84d",
+      "bom-ref": "urn:uuid:fc2499cf-2e0b-4585-8110-37542de40cd0",
       "name": "sha1",
       "description": "Encontrado em: main.go:22",
       "cryptoProperties": {
@@ -986,24 +986,24 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:b216fd1f-f115-466b-8699-73330121ccbd",
-      "name": "rsa",
-      "description": "Encontrado em: main.go:23",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "quantumSecurityStatus": "CRITICAL",
-        "riskJustification": "Vulner\u00e1vel ao Algoritmo de Shor (Criptografia Assim\u00e9trica Cl\u00e1ssica)"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "urn:uuid:01bcf32d-0fef-46e0-b70e-8e04a87eee7a",
+      "bom-ref": "urn:uuid:7b273cd7-f8c1-43fb-bb51-621920c47de1",
       "name": "SHA1",
       "description": "Encontrado em: main.go:23",
       "cryptoProperties": {
         "assetType": "algorithm",
         "quantumSecurityStatus": "MEDIUM",
         "riskJustification": "Enfraquecido pelo Algoritmo de Grover (Cifras Sim\u00e9tricas curtas e Hashes legados)"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "urn:uuid:b344083c-e48b-4d53-9d60-e0105b5c4b66",
+      "name": "rsa",
+      "description": "Encontrado em: main.go:23",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "quantumSecurityStatus": "CRITICAL",
+        "riskJustification": "Vulner\u00e1vel ao Algoritmo de Shor (Criptografia Assim\u00e9trica Cl\u00e1ssica)"
       }
     }
   ]

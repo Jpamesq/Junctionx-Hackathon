@@ -88,5 +88,37 @@ def scan_codebase(directory_path):
                                 })
                 except Exception:
                     continue
+
+            # 3. Processar Artefactos Binários (.dll, .class, .so)
+            elif file.endswith(('.dll', '.exe', '.so', '.class', '.jar', '.bin')):
+                try:
+                    # Ler o ficheiro em modo de bytes (rb)
+                    with open(file_path, 'rb') as f:
+                        content = f.read()
+                        
+                        # Extrair todas as "strings" legíveis por humanos presas no binário
+                        ascii_strings = re.findall(rb'[a-zA-Z0-9_\-\.]{4,}', content)
+                        
+                        for b_str in set(ascii_strings):
+                            decoded_str = b_str.decode('utf-8', errors='ignore')
+                            
+                            # Procurar algoritmos nas strings extraídas
+                            matches = CRYPTO_REGEX.findall(decoded_str)
+                            for match in set(matches):
+                                risk, desc = classify_primitive(match)
+                                
+                                num_in_name = re.search(r'\d{3,}', match)
+                                key_length = num_in_name.group(0) if num_in_name else "Não definido"
+
+                                results.append({
+                                    "file": file,
+                                    "type": "Binary Artifact",
+                                    "algorithm": match,
+                                    "risk_level": risk,
+                                    "risk_reason": desc,
+                                    "key_length": key_length
+                                })
+                except Exception:
+                    continue
                     
     return results
