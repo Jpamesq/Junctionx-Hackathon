@@ -97,6 +97,10 @@ def scan_codebase(directory_path):
 
             # 3. Artefactos Binários
             elif file.endswith(('.dll', '.exe', '.so', '.class', '.jar', '.bin')):
+                # BLINDAGEM DE MEMÓRIA: Evita ler binários gigantes para a RAM (>15MB)
+                if os.path.getsize(file_path) > 15 * 1024 * 1024:
+                    continue
+                
                 try:
                     with open(file_path, 'rb') as f:
                         content = f.read()
