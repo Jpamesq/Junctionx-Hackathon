@@ -1,6 +1,7 @@
 import sys
 import json
 import pandas as pd
+from tabulate import tabulate
 from scanner import scan_codebase
 from cbom_generator import generate_cbom
 
@@ -17,7 +18,7 @@ def main():
 
     df = pd.DataFrame(results)
     
-    # Proteção: Se o scanner.py se esquecer de enviar o risk_reason, criamos uma coluna vazia para não dar erro
+    # Proteção: Se o scanner.py se esquecer de enviar o risk_reason, criamos uma coluna vazia
     if 'risk_reason' not in df.columns:
         df['risk_reason'] = "Motivo não especificado"
     
@@ -28,7 +29,7 @@ def main():
     review = len(df[df['risk_level'] == 'REVIEW'])
     total = len(df)
     
-    # Evitar divisão por zero se o total for 0 (embora o 'if not results' acima já proteja)
+    # Evitar divisão por zero se o total for 0
     score = min(100, int(((critical * 3 + medium * 1) / (total * 3)) * 100)) if total > 0 else 0
 
     # ------------------------------------------
@@ -48,12 +49,13 @@ def main():
     # SEPARAR O RELATÓRIO EM DUAS TABELAS
     # ------------------------------------------
     
-# 1. Tabela apenas com os Algoritmos
+    # 1. Tabela apenas com os Algoritmos
     df_algos = df[df['type'].str.contains('Codebase$|Cloud/KMS Config', regex=True, na=False)]
     print("\n[ Tabela 1: Algoritmos Criptográficos Detetados ]")
     if not df_algos.empty:
-        # ADICIONA O 'key_length' AQUI NO MEIO:
-        print(df_algos[['file', 'algorithm', 'key_length', 'risk_level', 'risk_reason']].to_string(index=False))
+        df_imprimir = df_algos[['file', 'algorithm', 'key_length', 'risk_level', 'risk_reason']]
+        # Formatar com tabulate
+        print(tabulate(df_imprimir, headers=['Ficheiro', 'Algoritmo', 'Tamanho Chave', 'Nível Risco', 'Motivo'], tablefmt='psql', showindex=False))
     else:
         print("Nenhum algoritmo direto encontrado.")
 
@@ -61,7 +63,9 @@ def main():
     df_libs = df[df['type'] == 'Codebase (Library)']
     print("\n[ Tabela 2: Bibliotecas Criptográficas Importadas ]")
     if not df_libs.empty:
-        print(df_libs[['file', 'algorithm', 'risk_level', 'risk_reason']].to_string(index=False))
+        df_imprimir_libs = df_libs[['file', 'algorithm', 'risk_level', 'risk_reason']]
+        # Formatar com tabulate
+        print(tabulate(df_imprimir_libs, headers=['Ficheiro', 'Biblioteca', 'Nível Risco', 'Motivo'], tablefmt='psql', showindex=False))
     else:
         print("Nenhuma importação de biblioteca de segurança detetada.")
     print("\n------------------------------------------\n")
@@ -70,7 +74,7 @@ def main():
     cbom = generate_cbom(results)
     with open("quantumtrace_cbom.json", "w") as f:
         json.dump(cbom, f, indent=2)
-    print("\n📥 Relatório CBOM exportado para 'quantumtrace_cbom.json'\n")
+    print("📥 Relatório CBOM exportado para 'quantumtrace_cbom.json'\n")
 
 if __name__ == "__main__":
     main()
