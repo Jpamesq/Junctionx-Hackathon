@@ -17,70 +17,869 @@
         }
       },
       "evidence": {
-        "location": "update_feed.py:5"
+        "location": "quantumtrace_cbom.json"
       }
     },
     {
       "type": "cryptographic-asset",
       "bom-ref": "crypto-asset-1",
+      "name": "ECDH",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "ECDH",
+          "cryptoFunctions": [
+            "CRITICAL"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "quantumtrace_cbom.json"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-2",
+      "name": "SHA1",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "SHA1",
+          "cryptoFunctions": [
+            "MEDIUM"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "quantumtrace_cbom.json"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-3",
       "name": "AES",
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
           "primitive": "AES",
           "cryptoFunctions": [
-            "UNKNOWN"
+            "MEDIUM"
           ]
         }
       },
       "evidence": {
-        "location": "report_export.py:11"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-2",
-      "name": "SHA256",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "algorithmProperties": {
-          "primitive": "SHA256",
-          "cryptoFunctions": [
-            "UNKNOWN"
-          ]
-        }
-      },
-      "evidence": {
-        "location": "member_credentials.py:13"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-3",
-      "name": "SHA256",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "algorithmProperties": {
-          "primitive": "SHA256",
-          "cryptoFunctions": [
-            "UNKNOWN"
-          ]
-        }
-      },
-      "evidence": {
-        "location": "member_credentials.py:18"
+        "location": "quantumtrace_cbom.json"
       }
     },
     {
       "type": "cryptographic-asset",
       "bom-ref": "crypto-asset-4",
+      "name": "KYBER",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "KYBER",
+          "cryptoFunctions": [
+            "SAFE"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "quantumtrace_cbom.json"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-5",
+      "name": "SHA-512",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "SHA-512",
+          "cryptoFunctions": [
+            "SAFE"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "quantumtrace_cbom.json"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-6",
+      "name": "aes",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "aes",
+          "cryptoFunctions": [
+            "MEDIUM"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "quantumtrace_cbom.json"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-7",
+      "name": "Kyber",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "Kyber",
+          "cryptoFunctions": [
+            "SAFE"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "quantumtrace_cbom.json"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-8",
+      "name": "ECDSA",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "ECDSA",
+          "cryptoFunctions": [
+            "CRITICAL"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "quantumtrace_cbom.json"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-9",
+      "name": "secp256r1",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "secp256r1",
+          "cryptoFunctions": [
+            "CRITICAL"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "quantumtrace_cbom.json"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-10",
+      "name": "ML-KEM",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "ML-KEM",
+          "cryptoFunctions": [
+            "SAFE"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "quantumtrace_cbom.json"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-11",
+      "name": "RSA",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "RSA",
+          "cryptoFunctions": [
+            "CRITICAL"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "quantumtrace_cbom.json"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-12",
+      "name": "SHA-1",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "SHA-1",
+          "cryptoFunctions": [
+            "MEDIUM"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "quantumtrace_cbom.json"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-13",
+      "name": "DES",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "DES",
+          "cryptoFunctions": [
+            "MEDIUM"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "quantumtrace_cbom.json"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-14",
+      "name": "SHA256",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "SHA256",
+          "cryptoFunctions": [
+            "SAFE"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "quantumtrace_cbom.json"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-15",
+      "name": "SECP256R1",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "SECP256R1",
+          "cryptoFunctions": [
+            "CRITICAL"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "quantumtrace_cbom.json"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-16",
+      "name": "AES-128",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "AES-128",
+          "cryptoFunctions": [
+            "MEDIUM"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "quantumtrace_cbom.json"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-17",
+      "name": "sha512",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "sha512",
+          "cryptoFunctions": [
+            "SAFE"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "quantumtrace_cbom.json"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-18",
+      "name": "3DES",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "3DES",
+          "cryptoFunctions": [
+            "MEDIUM"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "quantumtrace_cbom.json"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-19",
+      "name": "AES-256",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "AES-256",
+          "cryptoFunctions": [
+            "MEDIUM"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "quantumtrace_cbom.json"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-20",
+      "name": "rsa",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "rsa",
+          "cryptoFunctions": [
+            "CRITICAL"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "quantumtrace_cbom.json"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-21",
       "name": "sha256",
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
           "primitive": "sha256",
           "cryptoFunctions": [
-            "UNKNOWN"
+            "SAFE"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "quantumtrace_cbom.json"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-22",
+      "name": "ECDSA",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "ECDSA",
+          "cryptoFunctions": [
+            "CRITICAL"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "risk_engine.py:4"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-23",
+      "name": "RSA",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "RSA",
+          "cryptoFunctions": [
+            "CRITICAL"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "risk_engine.py:4"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-24",
+      "name": "ECDH",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "ECDH",
+          "cryptoFunctions": [
+            "CRITICAL"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "risk_engine.py:4"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-25",
+      "name": "SECP256R1",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "SECP256R1",
+          "cryptoFunctions": [
+            "CRITICAL"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "risk_engine.py:4"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-26",
+      "name": "AES",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "AES",
+          "cryptoFunctions": [
+            "MEDIUM"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "risk_engine.py:8"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-27",
+      "name": "DES",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "DES",
+          "cryptoFunctions": [
+            "MEDIUM"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "risk_engine.py:9"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-28",
+      "name": "SHA-1",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "SHA-1",
+          "cryptoFunctions": [
+            "MEDIUM"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "risk_engine.py:9"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-29",
+      "name": "SHA1",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "SHA1",
+          "cryptoFunctions": [
+            "MEDIUM"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "risk_engine.py:9"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-30",
+      "name": "AES",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "AES",
+          "cryptoFunctions": [
+            "MEDIUM"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "risk_engine.py:9"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-31",
+      "name": "AES-128",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "AES-128",
+          "cryptoFunctions": [
+            "MEDIUM"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "risk_engine.py:9"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-32",
+      "name": "3DES",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "3DES",
+          "cryptoFunctions": [
+            "MEDIUM"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "risk_engine.py:9"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-33",
+      "name": "SHA256",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "SHA256",
+          "cryptoFunctions": [
+            "SAFE"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "risk_engine.py:15"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-34",
+      "name": "SHA512",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "SHA512",
+          "cryptoFunctions": [
+            "SAFE"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "risk_engine.py:15"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-35",
+      "name": "AES-256",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "AES-256",
+          "cryptoFunctions": [
+            "MEDIUM"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "risk_engine.py:17"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-36",
+      "name": "SHA256",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "SHA256",
+          "cryptoFunctions": [
+            "SAFE"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "risk_engine.py:17"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-37",
+      "name": "SHA512",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "SHA512",
+          "cryptoFunctions": [
+            "SAFE"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "risk_engine.py:17"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-38",
+      "name": "SHA-512",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "SHA-512",
+          "cryptoFunctions": [
+            "SAFE"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "risk_engine.py:17"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-39",
+      "name": "SHA-256",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "SHA-256",
+          "cryptoFunctions": [
+            "SAFE"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "risk_engine.py:17"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-40",
+      "name": "ML-KEM",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "ML-KEM",
+          "cryptoFunctions": [
+            "SAFE"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "risk_engine.py:18"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-41",
+      "name": "KYBER",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "KYBER",
+          "cryptoFunctions": [
+            "SAFE"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "risk_engine.py:18"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-42",
+      "name": "DES",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "DES",
+          "cryptoFunctions": [
+            "MEDIUM"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "scanner.py:9"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-43",
+      "name": "ECDH",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "ECDH",
+          "cryptoFunctions": [
+            "CRITICAL"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "scanner.py:9"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-44",
+      "name": "Kyber",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "Kyber",
+          "cryptoFunctions": [
+            "SAFE"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "scanner.py:9"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-45",
+      "name": "ECDSA",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "ECDSA",
+          "cryptoFunctions": [
+            "CRITICAL"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "scanner.py:9"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-46",
+      "name": "AES",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "AES",
+          "cryptoFunctions": [
+            "MEDIUM"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "scanner.py:9"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-47",
+      "name": "secp256r1",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "secp256r1",
+          "cryptoFunctions": [
+            "CRITICAL"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "scanner.py:9"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-48",
+      "name": "ML-KEM",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "ML-KEM",
+          "cryptoFunctions": [
+            "SAFE"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "scanner.py:9"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-49",
+      "name": "RSA",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "RSA",
+          "cryptoFunctions": [
+            "CRITICAL"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "scanner.py:9"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-50",
+      "name": "3DES",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "3DES",
+          "cryptoFunctions": [
+            "MEDIUM"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "scanner.py:9"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-51",
+      "name": "sha256",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "sha256",
+          "cryptoFunctions": [
+            "SAFE"
           ]
         }
       },
@@ -90,7 +889,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-5",
+      "bom-ref": "crypto-asset-52",
       "name": "rsa",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -107,7 +906,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-6",
+      "bom-ref": "crypto-asset-53",
       "name": "rsa",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -124,7 +923,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-7",
+      "bom-ref": "crypto-asset-54",
       "name": "SHA1",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -141,7 +940,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-8",
+      "bom-ref": "crypto-asset-55",
       "name": "SHA1",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -158,24 +957,58 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-9",
-      "name": "SHA-1",
+      "bom-ref": "crypto-asset-56",
+      "name": "SHA256",
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "SHA-1",
+          "primitive": "SHA256",
+          "cryptoFunctions": [
+            "SAFE"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "member_credentials.py:13"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-57",
+      "name": "SHA256",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "SHA256",
+          "cryptoFunctions": [
+            "SAFE"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "member_credentials.py:18"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-58",
+      "name": "AES",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "AES",
           "cryptoFunctions": [
             "MEDIUM"
           ]
         }
       },
       "evidence": {
-        "location": "PatchFeed.java:8"
+        "location": "report_export.py:11"
       }
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-10",
+      "bom-ref": "crypto-asset-59",
       "name": "sha1",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -187,138 +1020,19 @@
         }
       },
       "evidence": {
-        "location": "PatchFeed.java:8"
+        "location": "update_feed.py:5"
       }
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-11",
-      "name": "sha1",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "algorithmProperties": {
-          "primitive": "sha1",
-          "cryptoFunctions": [
-            "MEDIUM"
-          ]
-        }
-      },
-      "evidence": {
-        "location": "PatchFeed.java:9"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-12",
-      "name": "AES",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "algorithmProperties": {
-          "primitive": "AES",
-          "cryptoFunctions": [
-            "UNKNOWN"
-          ]
-        }
-      },
-      "evidence": {
-        "location": "BatchExporter.java:10"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-13",
-      "name": "AES",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "algorithmProperties": {
-          "primitive": "AES",
-          "cryptoFunctions": [
-            "UNKNOWN"
-          ]
-        }
-      },
-      "evidence": {
-        "location": "BatchExporter.java:13"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-14",
-      "name": "RSA",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "algorithmProperties": {
-          "primitive": "RSA",
-          "cryptoFunctions": [
-            "CRITICAL"
-          ]
-        }
-      },
-      "evidence": {
-        "location": "ReceiptSigner.java:12"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-15",
-      "name": "AES",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "algorithmProperties": {
-          "primitive": "AES",
-          "cryptoFunctions": [
-            "UNKNOWN"
-          ]
-        }
-      },
-      "evidence": {
-        "location": "SessionCipher.java:12"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-16",
-      "name": "AES",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "algorithmProperties": {
-          "primitive": "AES",
-          "cryptoFunctions": [
-            "UNKNOWN"
-          ]
-        }
-      },
-      "evidence": {
-        "location": "SessionCipher.java:18"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-17",
+      "bom-ref": "crypto-asset-60",
       "name": "sha256",
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
           "primitive": "sha256",
           "cryptoFunctions": [
-            "UNKNOWN"
-          ]
-        }
-      },
-      "evidence": {
-        "location": "main.go:5"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-18",
-      "name": "sha512",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "algorithmProperties": {
-          "primitive": "sha512",
-          "cryptoFunctions": [
-            "UNKNOWN"
+            "SAFE"
           ]
         }
       },
@@ -328,65 +1042,14 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-19",
-      "name": "sha512",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "algorithmProperties": {
-          "primitive": "sha512",
-          "cryptoFunctions": [
-            "UNKNOWN"
-          ]
-        }
-      },
-      "evidence": {
-        "location": "main.go:13"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-20",
+      "bom-ref": "crypto-asset-61",
       "name": "sha256",
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
           "primitive": "sha256",
           "cryptoFunctions": [
-            "UNKNOWN"
-          ]
-        }
-      },
-      "evidence": {
-        "location": "main.go:22"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-21",
-      "name": "sha256",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "algorithmProperties": {
-          "primitive": "sha256",
-          "cryptoFunctions": [
-            "UNKNOWN"
-          ]
-        }
-      },
-      "evidence": {
-        "location": "main.go:6"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-22",
-      "name": "sha256",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "algorithmProperties": {
-          "primitive": "sha256",
-          "cryptoFunctions": [
-            "UNKNOWN"
+            "SAFE"
           ]
         }
       },
@@ -396,14 +1059,14 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-23",
+      "bom-ref": "crypto-asset-62",
       "name": "sha256",
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
           "primitive": "sha256",
           "cryptoFunctions": [
-            "UNKNOWN"
+            "SAFE"
           ]
         }
       },
@@ -413,14 +1076,14 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-24",
+      "bom-ref": "crypto-asset-63",
       "name": "sha256",
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
           "primitive": "sha256",
           "cryptoFunctions": [
-            "UNKNOWN"
+            "SAFE"
           ]
         }
       },
@@ -430,14 +1093,14 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-25",
+      "bom-ref": "crypto-asset-64",
       "name": "aes",
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
           "primitive": "aes",
           "cryptoFunctions": [
-            "UNKNOWN"
+            "MEDIUM"
           ]
         }
       },
@@ -447,14 +1110,14 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-26",
+      "bom-ref": "crypto-asset-65",
       "name": "aes",
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
           "primitive": "aes",
           "cryptoFunctions": [
-            "UNKNOWN"
+            "MEDIUM"
           ]
         }
       },
@@ -464,14 +1127,14 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-27",
+      "bom-ref": "crypto-asset-66",
       "name": "aes",
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
           "primitive": "aes",
           "cryptoFunctions": [
-            "UNKNOWN"
+            "MEDIUM"
           ]
         }
       },
@@ -481,14 +1144,14 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-28",
+      "bom-ref": "crypto-asset-67",
       "name": "aes",
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
           "primitive": "aes",
           "cryptoFunctions": [
-            "UNKNOWN"
+            "MEDIUM"
           ]
         }
       },
@@ -498,14 +1161,14 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-29",
+      "bom-ref": "crypto-asset-68",
       "name": "aes",
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
           "primitive": "aes",
           "cryptoFunctions": [
-            "UNKNOWN"
+            "MEDIUM"
           ]
         }
       },
@@ -515,48 +1178,14 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-30",
-      "name": "sha1",
+      "bom-ref": "crypto-asset-69",
+      "name": "sha256",
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "sha1",
+          "primitive": "sha256",
           "cryptoFunctions": [
-            "MEDIUM"
-          ]
-        }
-      },
-      "evidence": {
-        "location": "main.go:4"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-31",
-      "name": "sha1",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "algorithmProperties": {
-          "primitive": "sha1",
-          "cryptoFunctions": [
-            "MEDIUM"
-          ]
-        }
-      },
-      "evidence": {
-        "location": "main.go:10"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-32",
-      "name": "aes",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "algorithmProperties": {
-          "primitive": "aes",
-          "cryptoFunctions": [
-            "UNKNOWN"
+            "SAFE"
           ]
         }
       },
@@ -566,41 +1195,58 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-33",
-      "name": "aes",
+      "bom-ref": "crypto-asset-70",
+      "name": "sha512",
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "aes",
+          "primitive": "sha512",
           "cryptoFunctions": [
-            "UNKNOWN"
+            "SAFE"
           ]
         }
       },
       "evidence": {
-        "location": "main.go:23"
+        "location": "main.go:6"
       }
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-34",
-      "name": "aes",
+      "bom-ref": "crypto-asset-71",
+      "name": "sha512",
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "aes",
+          "primitive": "sha512",
           "cryptoFunctions": [
-            "UNKNOWN"
+            "SAFE"
           ]
         }
       },
       "evidence": {
-        "location": "main.go:40"
+        "location": "main.go:13"
       }
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-35",
+      "bom-ref": "crypto-asset-72",
+      "name": "sha256",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "sha256",
+          "cryptoFunctions": [
+            "SAFE"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "main.go:22"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-73",
       "name": "rsa",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -617,7 +1263,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-36",
+      "bom-ref": "crypto-asset-74",
       "name": "sha1",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -634,7 +1280,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-37",
+      "bom-ref": "crypto-asset-75",
       "name": "rsa",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -651,7 +1297,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-38",
+      "bom-ref": "crypto-asset-76",
       "name": "rsa",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -668,7 +1314,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-39",
+      "bom-ref": "crypto-asset-77",
       "name": "rsa",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -685,7 +1331,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-40",
+      "bom-ref": "crypto-asset-78",
       "name": "sha1",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -702,24 +1348,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-41",
-      "name": "SHA1",
-      "cryptoProperties": {
-        "assetType": "algorithm",
-        "algorithmProperties": {
-          "primitive": "SHA1",
-          "cryptoFunctions": [
-            "MEDIUM"
-          ]
-        }
-      },
-      "evidence": {
-        "location": "main.go:18"
-      }
-    },
-    {
-      "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-42",
+      "bom-ref": "crypto-asset-79",
       "name": "rsa",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -736,7 +1365,24 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-43",
+      "bom-ref": "crypto-asset-80",
+      "name": "SHA1",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "SHA1",
+          "cryptoFunctions": [
+            "MEDIUM"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "main.go:18"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-81",
       "name": "rsa",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -753,7 +1399,7 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-44",
+      "bom-ref": "crypto-asset-82",
       "name": "sha1",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -770,7 +1416,24 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-45",
+      "bom-ref": "crypto-asset-83",
+      "name": "rsa",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "rsa",
+          "cryptoFunctions": [
+            "CRITICAL"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "main.go:23"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-84",
       "name": "SHA1",
       "cryptoProperties": {
         "assetType": "algorithm",
@@ -787,19 +1450,223 @@
     },
     {
       "type": "cryptographic-asset",
-      "bom-ref": "crypto-asset-46",
-      "name": "rsa",
+      "bom-ref": "crypto-asset-85",
+      "name": "sha1",
       "cryptoProperties": {
         "assetType": "algorithm",
         "algorithmProperties": {
-          "primitive": "rsa",
+          "primitive": "sha1",
+          "cryptoFunctions": [
+            "MEDIUM"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "main.go:4"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-86",
+      "name": "sha1",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "sha1",
+          "cryptoFunctions": [
+            "MEDIUM"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "main.go:10"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-87",
+      "name": "aes",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "aes",
+          "cryptoFunctions": [
+            "MEDIUM"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "main.go:5"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-88",
+      "name": "aes",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "aes",
+          "cryptoFunctions": [
+            "MEDIUM"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "main.go:23"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-89",
+      "name": "aes",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "aes",
+          "cryptoFunctions": [
+            "MEDIUM"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "main.go:40"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-90",
+      "name": "AES",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "AES",
+          "cryptoFunctions": [
+            "MEDIUM"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "BatchExporter.java:10"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-91",
+      "name": "AES",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "AES",
+          "cryptoFunctions": [
+            "MEDIUM"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "BatchExporter.java:13"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-92",
+      "name": "SHA-1",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "SHA-1",
+          "cryptoFunctions": [
+            "MEDIUM"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "PatchFeed.java:8"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-93",
+      "name": "sha1",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "sha1",
+          "cryptoFunctions": [
+            "MEDIUM"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "PatchFeed.java:8"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-94",
+      "name": "sha1",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "sha1",
+          "cryptoFunctions": [
+            "MEDIUM"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "PatchFeed.java:9"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-95",
+      "name": "RSA",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "RSA",
           "cryptoFunctions": [
             "CRITICAL"
           ]
         }
       },
       "evidence": {
-        "location": "main.go:23"
+        "location": "ReceiptSigner.java:12"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-96",
+      "name": "AES",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "AES",
+          "cryptoFunctions": [
+            "MEDIUM"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "SessionCipher.java:12"
+      }
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto-asset-97",
+      "name": "AES",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "AES",
+          "cryptoFunctions": [
+            "MEDIUM"
+          ]
+        }
+      },
+      "evidence": {
+        "location": "SessionCipher.java:18"
       }
     }
   ]
