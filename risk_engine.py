@@ -1,23 +1,26 @@
 # risk_engine.py
 
 RISK_LEVELS = {
-    "CRITICAL": {
-        "description": "Vulnerável ao Algoritmo de Shor",
-        # Asymmetric schemes vulnerable to Shor's algorithm
+    "CLASSICAL_CRITICAL": {
+        "description": "Quebrado na Computação Clássica (Risco Imediato)",
+        "patterns": ["MD5", "SHA-1", "SHA1", "RC4", "DES", "3DES"],
+        "remediation": "Substituir urgentemente (Não aguardar pela transição PQC)",
+        "nist_standard": "Obsoleto / Deprecated"
+    },
+    "QUANTUM_CRITICAL": {
+        "description": "Vulnerável a Shor (Harvest Now, Decrypt Later)",
         "patterns": ["RSA", "ECDSA", "ECDH", "DSA", "DH", "DIFFIE-HELLMAN", "SECP256R1", "SECP384R1"],
-        "remediation": "Migrar para PQC",
+        "remediation": "Migrar para PQC (Ex: ML-KEM / ML-DSA)",
         "nist_standard": None
     },
     "MEDIUM": {
-        "description": "Enfraquecido pelo Algoritmo de Grover",
-        # Symmetric ciphers/hashes weakened by Grover's algorithm
-        "patterns": ["AES-128", "3DES", "DES", "SHA-1", "SHA1", "MD5", "RC4", "AES", "AES128"],
-        "remediation": "Aumentar o tamanho da chave/hash (ex: migrar para AES-256 ou SHA-3)",
+        "description": "Enfraquecido por Grover",
+        "patterns": ["AES-128", "AES128", "AES"],
+        "remediation": "Aumentar o tamanho da chave (migrar para AES-256)",
         "nist_standard": None
     },
     "SAFE": {
         "description": "Resistente à Computação Quântica",
-        # Large-key symmetric primitives and PQC standards
         "patterns": [
             "AES-256", "AES256", "SHA-3", "SHA-512", "SHA512", "SHA-256", "SHA256",
             "CHACHA20", "ML-KEM", "KYBER", "ML-DSA", "DILITHIUM", 
@@ -28,7 +31,6 @@ RISK_LEVELS = {
     }
 }
 
-# risk_engine.py - Exemplo de ajuste de ordem e validação exata
 def classify_primitive(name: str):
     name_upper = name.upper().replace("-", "").replace("_", "")
     
@@ -38,13 +40,19 @@ def classify_primitive(name: str):
         if norm_pattern == name_upper or norm_pattern in name_upper:
             return "SAFE", RISK_LEVELS["SAFE"]["description"]
             
-    # 2. Testar CRITICAL (Shor)
-    for pattern in RISK_LEVELS["CRITICAL"]["patterns"]:
+    # 2. Testar CLASSICAL_CRITICAL (Obsoleto)
+    for pattern in RISK_LEVELS["CLASSICAL_CRITICAL"]["patterns"]:
         norm_pattern = pattern.replace("-", "").replace("_", "")
         if norm_pattern == name_upper or norm_pattern in name_upper:
-            return "CRITICAL", RISK_LEVELS["CRITICAL"]["description"]
+            return "CLASSICAL_CRITICAL", RISK_LEVELS["CLASSICAL_CRITICAL"]["description"]
             
-    # 3. Testar MEDIUM (Grover)
+    # 3. Testar QUANTUM_CRITICAL (Shor)
+    for pattern in RISK_LEVELS["QUANTUM_CRITICAL"]["patterns"]:
+        norm_pattern = pattern.replace("-", "").replace("_", "")
+        if norm_pattern == name_upper or norm_pattern in name_upper:
+            return "QUANTUM_CRITICAL", RISK_LEVELS["QUANTUM_CRITICAL"]["description"]
+            
+    # 4. Testar MEDIUM (Grover)
     for pattern in RISK_LEVELS["MEDIUM"]["patterns"]:
         norm_pattern = pattern.replace("-", "").replace("_", "")
         if norm_pattern == name_upper or norm_pattern in name_upper:

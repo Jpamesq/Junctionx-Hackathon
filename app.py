@@ -44,43 +44,75 @@ if target_dir:
         if 'risk_reason' not in df.columns:
             df['risk_reason'] = "Motivo não especificado"
             
-        # Contagens para o Dashboard
-        critical = len(df[df['risk_level'] == 'CRITICAL'])
+        # ---------------------------------------------------------
+        # CARTÕES DE POSTURA DE INFRAESTRUTURA
+        # ---------------------------------------------------------
+        net_count = len(df[df['type'].str.contains('Network', case=False, na=False)])
+        code_count = len(df[df['type'].str.contains('Codebase|Binary', case=False, na=False)])
+        cloud_count = len(df[df['type'].str.contains('Cloud', case=False, na=False)])
+        
+        st.markdown("### Cobertura da Infraestrutura")
+        c1, c2, c3 = st.columns(3)
+        c1.metric(label="🌐 Network Traffic", value=f"{net_count} Ativos", delta="Sessões TLS")
+        c2.metric(label="💻 Application Code", value=f"{code_count} Ativos", delta="Python · Java · Go")
+        c3.metric(label="☁️ Cloud Posture", value=f"{cloud_count} Ativos", delta="KMS · Configurações")
+        
+        st.divider()
+            
+        # ---------------------------------------------------------
+        # MÉTRICAS DE RISCO E SCORE
+        # ---------------------------------------------------------
+        classical_crit = len(df[df['risk_level'] == 'CLASSICAL_CRITICAL'])
+        quantum_crit = len(df[df['risk_level'] == 'QUANTUM_CRITICAL'])
         medium = len(df[df['risk_level'] == 'MEDIUM'])
         safe = len(df[df['risk_level'] == 'SAFE'])
         total = len(df)
-        score = min(100, int(((critical * 3 + medium * 1) / (total * 3)) * 100)) if total > 0 else 0
+        
+        # Penalização maior para os críticos
+        score = min(100, int((((classical_crit * 4) + (quantum_crit * 3) + (medium * 1)) / (total * 4)) * 100)) if total > 0 else 0
 
-        # Métricas visuais coloridas
         st.subheader(f"Quantum Risk Score: {score}/100")
-        col1, col2, col3 = st.columns(3)
-        col1.error(f"🔴 Críticos (Vulneráveis a Shor): {critical}")
-        col2.warning(f"🟠 Médios (Enfraquecidos por Grover): {medium}")
-        col3.success(f"🟢 Seguros (PQC / Chaves Longas): {safe}")
+        col1, col2, col3, col4 = st.columns(4)
+        col1.error(f"🚨 Clássicos Críticos: {classical_crit}")
+        col2.error(f"🔴 Quânticos (Shor): {quantum_crit}")
+        col3.warning(f"🟠 Médios (Grover): {medium}")
+        col4.success(f"🟢 Seguros (PQC): {safe}")
 
         st.divider()
 
-        # Preparar o DataFrame final unificado
+        # ---------------------------------------------------------
+        # TABELA PRINCIPAL
+        # ---------------------------------------------------------
         df_display = df[['file', 'algorithm', 'key_length', 'risk_level', 'risk_reason']].copy()
         df_display.columns = ['Ficheiro', 'Algoritmo', 'Tamanho da Chave', 'Nível de Risco', 'Justificação']
 
         st.subheader("Relatório Consolidado de Ativos Criptográficos")
         
         # Função para colorir a coluna do Nível de Risco
+        def color_risk_column(val):
+            if val == 'CLASSICAL_CRITICAL':
+                return 'background-color: rgba(139, 0, 0, 0.4); color: #ff9999; font-weight: bold;'
+            elif val == 'QUANTUM_CRITICAL':
+                return 'background-color: rgba(255, 75, 75, 0.3); color: #ff4b4b; font-weight: bold;'
+            elif val == 'MEDIUM':
+                return 'background-color: rgba(255, 165, 0, 0.3); color: #ffa500; font-weight: bold;'
+            elif val == 'SAFE':
+                return 'background-color: rgba(40, 167, 69, 0.3); color: #28a745; font-weight: bold;'
+            return ''
+
+        # Aplicar cores à coluna Nível de Risco
+        styled_df = df_display.style.map(color_risk_column, subset=['Nível de Risco'])
+
         st.dataframe(
-            df_display, 
+            styled_df, 
             use_container_width=True, 
             hide_index=True,
-            height=(len(df_display) + 1) * 35,
-            column_config={
-                "Nível de Risco": st.column_config.TextColumn(
-                    "Nível de Risco",
-                    help="Classificação de risco quântico (CRITICAL / MEDIUM / SAFE)"
-                )
-            }
+            height=(len(df_display) + 1) * 35
         )
 
-        # Gerar e permitir download do CBOM oficial
+        # ---------------------------------------------------------
+        # EXPORTAÇÃO CBOM
+        # ---------------------------------------------------------
         cbom = generate_cbom(results)
         cbom_json = json.dumps(cbom, indent=2)
         
