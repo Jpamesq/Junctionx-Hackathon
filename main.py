@@ -48,11 +48,12 @@ def main():
     # SEPARAR O RELATÓRIO EM DUAS TABELAS
     # ------------------------------------------
     
-    # 1. Tabela apenas com os Algoritmos
+# 1. Tabela apenas com os Algoritmos
     df_algos = df[df['type'].str.contains('Codebase$|Cloud/KMS Config', regex=True, na=False)]
     print("\n[ Tabela 1: Algoritmos Criptográficos Detetados ]")
     if not df_algos.empty:
-        print(df_algos[['file', 'algorithm', 'risk_level', 'risk_reason']].to_string(index=False))
+        # ADICIONA O 'key_length' AQUI NO MEIO:
+        print(df_algos[['file', 'algorithm', 'key_length', 'risk_level', 'risk_reason']].to_string(index=False))
     else:
         print("Nenhum algoritmo direto encontrado.")
 

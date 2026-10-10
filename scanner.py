@@ -1,4 +1,3 @@
-# scanner.py
 import re
 import json
 import os
@@ -12,11 +11,14 @@ CRYPTO_REGEX = re.compile(
 
 # Regex para Bibliotecas (Sem grupos de captura internos para não partir o findall)
 LIBRARY_REGEX = re.compile(
-    r'(?:import\s+cryptography|from\s+cryptography|import\s+pycryptodome|import\s+OpenSSL|from\s+OpenSSL|'
-    r'import\s+java\.security|import\s+javax\.crypto|'
-    r'crypto\/[a-z0-9_]+|import\s+"crypto\/tls")',
+    r'\b(import cryptography|from cryptography|import pycryptodome|import OpenSSL|from OpenSSL|' 
+    r'import java\.security|import javax\.crypto|' 
+    r'\"crypto\/[a-z0-9_]+\"|import \"crypto/tls\")\b', 
     re.IGNORECASE
 )
+
+# Apanha key_size=2048 (Python), .init(256) (Java), ou GenerateKey(..., 2048) (Go)
+KEY_SIZE_REGEX = re.compile(r'(?:key_size\s*=\s*|\.init\(\s*|GenerateKey\([^,]+,\s*)(\d+)', re.IGNORECASE)
 
 def scan_codebase(directory_path):
     results = []
@@ -38,13 +40,14 @@ def scan_codebase(directory_path):
                                 "type": "Cloud/KMS Config",
                                 "algorithm": match,
                                 "risk_level": risk,
-                                "risk_reason": desc
+                                "risk_reason": desc,
+                                "key_length": "N/A"
                             })
                 except Exception:
                     continue
 
-            # 2. Processar Ficheiros de Código Fonte
-            elif file.endswith(('.py', '.java', '.go', '.yaml', '.yml', '.env')):
+            # 2. Processar Ficheiros de Código (Python, Java, Go, etc.)
+            elif file.endswith(('.py', '.java', '.go', '.yaml', '.env')):
                 try:
                     with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
                         for line_num, line in enumerate(f, 1):
@@ -53,12 +56,23 @@ def scan_codebase(directory_path):
                             matches = CRYPTO_REGEX.findall(line)
                             for match in set(matches):
                                 risk, desc = classify_primitive(match)
+                                
+                                # Procurar tamanho da chave na mesma linha
+                                key_match = KEY_SIZE_REGEX.search(line)
+                                if key_match:
+                                    key_length = key_match.group(1)
+                                else:
+                                    # Rede de segurança: tentar extrair o número do próprio nome (ex: AES-128 -> 128)
+                                    num_in_name = re.search(r'\d{3,}', match)
+                                    key_length = num_in_name.group(0) if num_in_name else "Não definido"
+
                                 results.append({
                                     "file": f"{file}:{line_num}",
                                     "type": "Codebase",
                                     "algorithm": match,
                                     "risk_level": risk,
-                                    "risk_reason": desc
+                                    "risk_reason": desc,
+                                    "key_length": key_length
                                 })
                                 
                             # B. Procurar por Bibliotecas Criptográficas
@@ -69,7 +83,8 @@ def scan_codebase(directory_path):
                                     "type": "Codebase (Library)",
                                     "algorithm": lib.strip(),
                                     "risk_level": "REVIEW",
-                                    "risk_reason": "Uso de biblioteca criptográfica detetado"
+                                    "risk_reason": "Lib",
+                                    "key_length": "N/A"
                                 })
                 except Exception:
                     continue
