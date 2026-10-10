@@ -67,24 +67,17 @@ if target_dir:
         st.subheader("Relatório Consolidado de Ativos Criptográficos")
         
         # Função para colorir a coluna do Nível de Risco
-        def color_risk_column(val):
-            if val == 'CRITICAL':
-                return 'background-color: rgba(255, 75, 75, 0.3); color: #ff4b4b; font-weight: bold;'
-            elif val == 'MEDIUM':
-                return 'background-color: rgba(255, 165, 0, 0.3); color: #ffa500; font-weight: bold;'
-            elif val == 'SAFE':
-                return 'background-color: rgba(40, 167, 69, 0.3); color: #28a745; font-weight: bold;'
-            return ''
-
-        # Aplicar estilo de cores na coluna de risco (usando .map de forma segura)
-        styled_df = df_display.style.map(color_risk_column, subset=['Nível de Risco'])
-
-        # Exibir a tabela grande unificada, sem scroll interno forçado e sem índice
         st.dataframe(
-            styled_df, 
+            df_display, 
             use_container_width=True, 
             hide_index=True,
-            height=(len(df_display) + 1) * 35
+            height=(len(df_display) + 1) * 35,
+            column_config={
+                "Nível de Risco": st.column_config.TextColumn(
+                    "Nível de Risco",
+                    help="Classificação de risco quântico (CRITICAL / MEDIUM / SAFE)"
+                )
+            }
         )
 
         # Gerar e permitir download do CBOM oficial
