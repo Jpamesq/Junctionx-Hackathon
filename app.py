@@ -11,7 +11,7 @@ st.title("🛡️ QuantumTrace Audit Dashboard")
 st.markdown("Plataforma de Descoberta e Avaliação de Risco Quântico")
 
 # Input para a diretoria
-target_dir = st.text_input("📁 Diretoria a analisar:", "JunctionX-QuantumTrace/sample-repos")
+target_dir = st.text_input("📁 Diretoria a analisar:", "JunctionX-QuantumTrace/")
 
 if st.button("🚀 Iniciar Análise"):
     with st.spinner("A analisar ficheiros, configurações e binários..."):
