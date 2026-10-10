@@ -1,52 +1,9 @@
 import sys
 import json
 import pandas as pd
-import matplotlib.pyplot as plt
 from tabulate import tabulate
 from scanner import scan_codebase
 from cbom_generator import generate_cbom
-
-def export_dashboard_image(df):
-    """Gera um ficheiro PNG visualmente apelativo com as descobertas."""
-    # Prepara os dados (remover as bibliotecas para não sujar muito a imagem)
-    df_imprimir = df[df['type'] != 'Codebase (Library)'].copy()
-    if df_imprimir.empty:
-        return
-
-    # Limitar as colunas e renomear para ficar bonito na tabela
-    df_imprimir = df_imprimir[['file', 'algorithm', 'key_length', 'risk_level', 'risk_reason']]
-    df_imprimir.columns = ['Ficheiro', 'Algoritmo', 'Chave', 'Nível de Risco', 'Justificação']
-
-    fig, ax = plt.subplots(figsize=(14, len(df_imprimir) * 0.5 + 2))
-    ax.axis('off')
-
-    # Colorir as linhas conforme o risco
-    colors = []
-    for risco in df_imprimir['Nível de Risco']:
-        if risco == 'CRITICAL': colors.append(['#ffe6e6'] * 5)
-        elif risco == 'MEDIUM': colors.append(['#fff5e6'] * 5)
-        elif risco == 'SAFE': colors.append(['#e6ffe6'] * 5)
-        else: colors.append(['#ffffff'] * 5)
-
-    table = ax.table(cellText=df_imprimir.values, 
-                     colLabels=df_imprimir.columns, 
-                     cellColours=colors,
-                     cellLoc='center', loc='center')
-
-    table.auto_set_font_size(False)
-    table.set_fontsize(10)
-    table.scale(1.2, 2.0)
-
-    # Pintar o cabeçalho de escuro
-    for (row, col), cell in table.get_celld().items():
-        if row == 0:
-            cell.set_text_props(weight='bold', color='white')
-            cell.set_facecolor('#2c3e50')
-
-    plt.title("QuantumTrace Audit Dashboard", fontsize=16, fontweight='bold', pad=20)
-    plt.tight_layout()
-    plt.savefig("quantumtrace_dashboard.png", bbox_inches='tight', dpi=300)
-    print("📸 Dashboard visual exportado para 'quantumtrace_dashboard.png'")
 
 def main():
     # Recebe a pasta como argumento 
@@ -76,7 +33,7 @@ def main():
     score = min(100, int(((critical * 3 + medium * 1) / (total * 3)) * 100)) if total > 0 else 0
 
     # ------------------------------------------
-    # IMPRIMIR O DASHBOARD
+    # IMPRIMIR O DASHBOARD NO TERMINAL
     # ------------------------------------------
     print("==========================================")
     print("      🛡️ QUANTUMTRACE AUDIT REPORT       ")
@@ -93,11 +50,10 @@ def main():
     # ------------------------------------------
     
     # 1. Tabela apenas com os Algoritmos
-    df_algos = df[df['type'].str.contains('Codebase$|Cloud/KMS Config', regex=True, na=False)]
+    df_algos = df[df['type'].str.contains('Codebase$|Cloud/KMS Config|Binary Artifact', regex=True, na=False)]
     print("\n[ Tabela 1: Algoritmos Criptográficos Detetados ]")
     if not df_algos.empty:
         df_imprimir = df_algos[['file', 'algorithm', 'key_length', 'risk_level', 'risk_reason']]
-        # Formatar com tabulate
         print(tabulate(df_imprimir, headers=['Ficheiro', 'Algoritmo', 'Tamanho Chave', 'Nível Risco', 'Motivo'], tablefmt='psql', showindex=False))
     else:
         print("Nenhum algoritmo direto encontrado.")
@@ -107,7 +63,6 @@ def main():
     print("\n[ Tabela 2: Bibliotecas Criptográficas Importadas ]")
     if not df_libs.empty:
         df_imprimir_libs = df_libs[['file', 'algorithm', 'risk_level', 'risk_reason']]
-        # Formatar com tabulate
         print(tabulate(df_imprimir_libs, headers=['Ficheiro', 'Biblioteca', 'Nível Risco', 'Motivo'], tablefmt='psql', showindex=False))
     else:
         print("Nenhuma importação de biblioteca de segurança detetada.")
@@ -118,9 +73,6 @@ def main():
     with open("quantumtrace_cbom.json", "w") as f:
         json.dump(cbom, f, indent=2)
     print("📥 Relatório CBOM exportado para 'quantumtrace_cbom.json'\n")
-
-    # ---> A CHAMADA DA FUNÇÃO ESTÁ AGORA AQUI <---
-    export_dashboard_image(df)
 
 if __name__ == "__main__":
     main()
