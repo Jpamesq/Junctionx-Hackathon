@@ -3,6 +3,10 @@ import re
 import json
 import os
 from risk_engine import classify_primitive
+from pcap_scanner import parse_pcap
+
+# Dentro da função scan_codebase(), no loop dos ficheiros:
+
 
 # Regex para Algoritmos (Captura nomes isolados e com tamanhos de chave)
 CRYPTO_REGEX = re.compile(
@@ -87,6 +91,9 @@ def scan_codebase(directory_path):
                                 })
                 except Exception:
                     continue
+            elif file.endswith(('.pcap', '.pcapng')):
+                pcap_findings = parse_pcap(file_path)
+                results.extend(pcap_findings)
 
             # 3. Artefactos Binários (.dll, .class, .so, .jar)
             elif file.endswith(('.dll', '.exe', '.so', '.class', '.jar', '.bin')):
