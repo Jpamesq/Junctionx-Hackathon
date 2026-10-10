@@ -33,8 +33,7 @@ def classify_primitive(name: str):
     Categorizes identified primitives into clear risk tiers.
     """
     name_upper = name.upper()
-    # Remove hífens e espaços para garantir correspondência (ex: SHA-256 -> SHA256)
-    norm_name = name_upper.replace("-", "").replace("_", "")
+    
     for level, data in RISK_LEVELS.items():
         if any(pattern in name_upper for pattern in data["patterns"]):
             return level, data["description"]
