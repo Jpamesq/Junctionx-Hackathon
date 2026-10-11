@@ -10,6 +10,24 @@ import altair as alt
 # Configuração da página web (Ecrã inteiro garantido e sem sidebar)
 st.set_page_config(page_title="QuantumTrace | Risk Audit", layout="wide")
 
+uploaded_files = st.file_uploader(
+    "UPLOAD DATASET / FILES FOR LIVE SCAN", 
+    accept_multiple_files=True,
+    type=['py', 'java', 'go', 'json', 'pcap', 'bin']
+)
+
+if uploaded_files:
+    # Guardar temporariamente e passar ao scanner.py
+    import tempfile
+    with tempfile.TemporaryDirectory() as temp_dir:
+        for file in uploaded_files:
+            file_path = os.path.join(temp_dir, file.name)
+            with open(file_path, "wb") as f:
+                f.write(file.getbuffer())
+        
+        # Executar scan no dataset carregado
+        st.session_state.scan_results = scan_codebase(temp_dir)
+
 # CSS Personalizado - Estilo Enterprise / Cyberpunk Elegante
 st.markdown("""
     <style>
